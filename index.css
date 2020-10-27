@@ -1,0 +1,10 @@
+ul
+{
+    list-style-type: none;
+}
+nav
+{
+    display:grid;
+
+    grid-area:1/13/1/17;
+}
