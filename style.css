@@ -43,19 +43,34 @@ nav ul
 {
     width:50px;
     height:2px;
-    padding:2rem;
+    padding:70px;
 }
 .filters p
 {
     display:flex;
+    position:relative;
     flex-direction:row;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items: baseline;
     flex-wrap:nowrap;
-   
-    border-radius:15px 15px 5px 5px;
+}
+.filter i
+{
+    position: absolute;  
+    top:2px;
+    font-size: 21px;
+    width: 30px;
+    background-color:#DEEBFF;
+    /*top:2px;
+    font-size: 21px;
+    width: 30px;
+    height:.5rem;*/
+    
+    border-radius:15px 15px 15px 15px ;
 
-    text-align:justify;
+    /*text-align:justify;*/
+
+    
 }
 .filters:hover
 {
