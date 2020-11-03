@@ -45,6 +45,11 @@ nav ul
     height:2px;
     padding-top:100px;
 }
+button
+{
+    color:#0065FC;
+}
+
 .filters p
 {
     display:flex;
@@ -61,13 +66,10 @@ nav ul
 }
 .filters i 
 {
-    
     color:#0065FC;
     background-color: #DEEBFF;
-    
     padding:5px 0px 0px 0px;
-    border-radius: 15px;
-    
+    border-radius: 15px;  
 }
 .accomodation
 {
@@ -88,19 +90,40 @@ nav ul
     justify-content:start; 
     align-content:space-around;
     grid-row-gap:30px;
-    grid-column-gap:30;
+    grid-column-gap:30px;
     grid-gap:30px;
     background-color: #dfdddb;
     border-radius: 5px;
     padding: 10px;
     color: black;
-
-
 }    
-
 span
 {
 font-size: .8rem;
+}
+i
+{
+    color:#0065FC;
+}
+aside
+{
+    display:flex;
+    position:relative;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items: baseline;
+    flex-wrap:wrap;
+    background-color: #dfdddb;
+    margin: 15rem;
+    border-radius: 5px;
+    padding: 10px;
+    color: black;
+   
+}
+
+.aside figure
+{
+    margin-right:15px;
 }
 .visit
 {
@@ -138,24 +161,4 @@ footer
 footer ul
 {
     list-style-type: none;
-}
-aside
-{
-    display:flex;
-    position:relative;
-    flex-direction:column;
-    justify-content:space-between;
-    align-items: baseline;
-    flex-wrap:wrap;
-    background-color: #dfdddb;
-    margin: 15rem;
-    border-radius: 5px;
-    padding: 10px;
-    color: black;
-   
-}
-
-.aside figure
-{
-    margin-right:15px;
 }
