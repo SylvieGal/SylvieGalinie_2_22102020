@@ -10,13 +10,14 @@ html
     align-items:flex-end;
 
 }    
- .logo
+ /*placement du logo*/
+.logo
  {
      display:flex;
      flex-direction:row;
      align-items:baseline;
  }  
- 
+ /*positionnement box du menu suppression des puces*/
 nav ul
 {    
 
@@ -27,44 +28,50 @@ nav ul
     align-items:baseline;
 
 }   
- nav li
+/*positionnement du menu dans la box */ 
+nav li
 {  
     margin-right:15px;  
     margin-top:0px;
      
 }
+/*placement du slogan */
 #note
 {
     display: flex;
     padding-top:300px;
     font-size:1rem;
 }
+
+/*placement de la boite de dialogue pour la destination*/
 #dest
 {
     width:50px;
     height:2px;
     padding-top:100px;
 }
-#dest button
+/*background pour le bouton rechercher*/
+#dest input
 {
     color:white;
     background-color: #0065FC;
 }
+/*placement des filtres*/
 .filters p
 {
     display:flex;
     position:relative;
-    flex-direction:row;
+    flex-flow:row nowrap;
     justify-content:space-around;
     align-items: baseline;
-    flex-wrap:nowrap;
-
+    
 }
 
 .filters:hover
 {
     font-weight: bold;
 }
+/* mise en couleur des icones des filtres*/
 .filters i 
 {
     color:#0065FC;
@@ -72,19 +79,20 @@ nav ul
     padding:5px 0px 0px 0px;
     border-radius: 15px;  
 }
+/* mise en couleur des icones autre que filtre et etoiles*/
 p i
 {
     color: #0065FC;
 }
+/*placement box hebergements*/
 .accomodation
 {
     
     /*display:flex;
     position:relative;
-    flex-direction:row;
+    flex-flow:row wrap;
     justify-content:space-between;
     align-items: center;
-    flex-wrap:wrap;
     margin: 15rem;
     border-radius: 15px;
     padding: 10px;*/
@@ -104,49 +112,77 @@ p i
     border-radius: 15px;
     padding: 10px;
     color: black;
-}    
+    float:right;
+    white-space: nowrap;
+}
+/*taille des info complémentaires de la légende photo*/    
 span
 {
 font-size: .8rem;
 }
-figcaption
+/*placement des photos gauche */
+.accomodation img
 {
-    margin-right:15px;
-    position:right;
+    float:left;
+    
 }
+/*placement legende à coté de la photo*/
+#figcaption 
+{
+    width:300px;
+    height:300px;
+    margin-right:15px;
+    display:flex;
+    position:absolute;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+    align-items: baseline;
+    float:right;
+    white-space: nowrap;
+}
+/* mise en couleur des étoiles */
 figcaption i
 {
     color: #0065FC;
 }
-
+/* angles haut arrondis*/ 
 img
 {
-    border-radius:15px ;
+    border-radius:15px 15px 0px 0px;
+  
+
 }
+/*creation de la box aside*/
 aside
 {
     display:flex;
     position:relative;
-    flex-direction:column;
+    flex-flow:column wrap;
     justify-content:space-between;
     align-items: baseline;
-    flex-wrap:wrap;
     background-color: #dfdddb;
-    margin: 15rem;
+    margin: 13.5rem;
     border-radius: 15px;
-    padding: 10px;
+    padding: 5px;
     color: black;
 }
 .aside figure
 {
-    margin-right:15px;
+    margin-left:0px;
 }
+
+/*positionnement du texte par rapport à l'image*/ 
 article, aside
 {
     text-align: justify;
+    white-space: nowrap;
 }
+/* placement et présentation image dans l aside*/
 aside img 
 {
+    float:left;
+    width:70px;
+    height:90px;
     border-radius:15px 0px 0px 15px;
 }
 .visit
@@ -156,12 +192,13 @@ aside img
     position: relative;
     background-color: #dfdddb;  
     border-radius: 10px;
-    margin:5rem;
+    margin:15rem;
     padding: 10px;
     color: black;
     font-size: 0.9em;
 
 }
+/*box et presentation du footer*/
 footer
 {
     display :flex;
@@ -177,6 +214,7 @@ footer
     color: black;
     margin:1rem;
 }
+/* suppression des puces des menus*/
 footer ul
 {
     list-style-type: none;
