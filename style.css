@@ -45,11 +45,11 @@ nav ul
     height:2px;
     padding-top:100px;
 }
-button
+#dest button
 {
-    color:#0065FC;
+    color:white;
+    background-color: #0065FC;
 }
-
 .filters p
 {
     display:flex;
@@ -58,6 +58,7 @@ button
     justify-content:space-around;
     align-items: baseline;
     flex-wrap:nowrap;
+
 }
 
 .filters:hover
@@ -71,6 +72,10 @@ button
     padding:5px 0px 0px 0px;
     border-radius: 15px;  
 }
+p i
+{
+    color: #0065FC;
+}
 .accomodation
 {
     
@@ -79,7 +84,10 @@ button
     flex-direction:row;
     justify-content:space-between;
     align-items: center;
-    flex-wrap:wrap;*/
+    flex-wrap:wrap;
+    margin: 15rem;
+    border-radius: 15px;
+    padding: 10px;*/
     width:1000px ;
     height:1000px;
     margin:3rem;
@@ -93,7 +101,7 @@ button
     grid-column-gap:30px;
     grid-gap:30px;
     background-color: #dfdddb;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 10px;
     color: black;
 }    
@@ -101,9 +109,19 @@ span
 {
 font-size: .8rem;
 }
-i
+figcaption
 {
-    color:#0065FC;
+    margin-right:15px;
+    position:right;
+}
+figcaption i
+{
+    color: #0065FC;
+}
+
+img
+{
+    border-radius:15px ;
 }
 aside
 {
@@ -115,26 +133,29 @@ aside
     flex-wrap:wrap;
     background-color: #dfdddb;
     margin: 15rem;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 10px;
     color: black;
-   
 }
-
 .aside figure
 {
     margin-right:15px;
+}
+article, aside
+{
+    text-align: justify;
+}
+aside img 
+{
+    border-radius:15px 0px 0px 15px;
 }
 .visit
 {
     display:flex;
     flex-direction: row ;
-    
-    
     position: relative;
-    background-color: #dfdddb;
-    
-    border-radius: 5px;
+    background-color: #dfdddb;  
+    border-radius: 10px;
     margin:5rem;
     padding: 10px;
     color: black;
@@ -146,17 +167,15 @@ footer
     display :flex;
     position: relative;
     flex-direction:row;
-    justify-content:space-between;
+    justify-content:space-evenly;
     align-items:center;
     flex-wrap:wrap;
-    font-size: small;
-       
+    font-size: small; 
     background-color: #dfdddb;
-    
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 10px;
     color: black;
-    margin:5rem;
+    margin:1rem;
 }
 footer ul
 {
