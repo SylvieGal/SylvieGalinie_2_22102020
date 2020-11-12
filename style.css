@@ -21,6 +21,7 @@ h1, h2, h3, h4, h5, h6
     display:flex;
     justify-content: space-between;
     align-items:flex-end;
+    height:20rem;
 
 }    
  /*placement du logo*/
@@ -56,6 +57,8 @@ nav li
     padding-top:5px;
     font-size:1rem;
     margin-bottom:10px ;
+    justify-content: flex-start;
+    align-items:flex-start;
 }
 
 /*placement de la boite de dialogue pour la destination*/
@@ -65,58 +68,81 @@ nav li
     width:50px;
     height:2px;
     padding-top:10px;
-    
+    text-align: center;  
+    justify-content: flex-start; 
+    align-content: flex-start;
+    flex-flow:row wrap; 
 }
 /*background pour le bouton rechercher*/
-
+/*insertion de l'icone dans cadre dest */ 
+/*#dest input::before
+{
+    margin-left:0.1rem;
+    content:attr(i);
+}*/
+.filters
+{
+    margin:2rem;
+    display: flex;
+    justify-self: flex-start;
+    align-self:flex-start;
+}
 /*placement des filtres*/
 .filters button
 {
-    font-weight: bold;
+    
     float: left;
-    display:flex;
     position:relative;
     flex-flow:row nowrap;
     justify-content:flex-start space-around;
     align-items: center;
-    margin:15px 5px 30px 5px;
+    margin:1rem 5px 30px 5px;
     padding-left: 2px;
-
-    box-sizing: border-box;
+    border: .2px solid #000;
+    
+    border-radius:20% ;
        
 }
-i /*::after*/
+form i /*::after*/
 {
     float:left;
-    content:element(button);
-    width:3rem;
-    height:1rem;
-    margin: 0 0.5rem 0.5rem 0;
-    padding: 0 .5rem;
+    /*content:element(button);*/
+    width:1.4rem;
+    height:1.1rem;
+    margin: 0 0.5rem 0 0;
+    padding: 0 .2rem;
     text-align:center;
 }
-/*p
+form div
 {
-    margin:15px;
+    display: flex;
+    flex-flow:row wrap;
+}
+p i
+{
+    
+    margin:.1rem;
     display:flex;
     position :relative;
-    float:both;
-    flex-flow:row nowrap;
-    
-}*/
+    flex-flow:row wrap;
+    justify-content:flex-start ;
+    align-items: flex-start;
+  
+}
 .filters:hover
 {
-    font-weight: bold;
+    
+    background-color: rgb(187, 184, 184);
 }
 /* mise en couleur des icones des filtres*/
 .filters i 
 {
     color:#0065FC;
     background-color: #b8d0f3;
-    padding:5px 0px 0px 0px;
+    padding:2px 0px 0px 0px;
     border-radius: 15px;  
     justify-content: space-around;
-    /*box-sizing: border-box;*/
+    box-sizing: center;
 }
 /* mise en couleur des icones autre que filtre et etoiles*/
 p i
@@ -159,11 +185,15 @@ span
 {
 font-size: .8rem;
 }
+#accomodation h4
+{
+    text-align: left;
+}
 /*placement des photos gauche */
-.accomodation img
+#accomodation img
 {
     
-    float:left;
+    float:both;
 }
 /*placement legende à coté de la photo*/
 #figcaption 
@@ -190,6 +220,50 @@ img
     border-radius:15px 15px 0px 0px;
   
 
+}
+/*placement des cartes hebergements*/
+#canne #port #mouettes
+{
+    display:grid;
+    grid:1/1/2/4;
+    flex-flow:row wrap;
+}
+#mer #panier #amina
+{
+    display:grid;
+    grid:2/1/3/4;
+    flex-flow:row wrap;
+    
+}
+
+/*bgc des cartes htl*/
+#canne
+{
+    justify-content:flex-start;
+    align-self: flex-start;
+}
+#port
+{
+    justify-self:center;
+    align-self: center;
+}
+#mouettes
+{
+    justify-content:flex-end;
+    align-self: flex-end;
+}
+
+#mer
+{
+    justify-content:flex-start;
+}
+#panier
+{
+    justify-content:center;
+}
+#amina
+{
+    justify-content: start;
 }
 /*creation de la box aside*/
 aside
@@ -243,10 +317,12 @@ footer
     display :flex;
     position: relative;
     flex-direction:row;
-    justify-content:space-evenly;
+    justify-content:space-around;
     align-items:left;
     flex-wrap:wrap;
-    font-size: small; 
+    font-size: small;
+    /*text-align: center;*/ 
+    text-decoration-color: black;
     background-color: #dfdddb;
     border-radius: 15px;
     padding: 10px;
@@ -258,22 +334,55 @@ footer
 footer ul
 {
     list-style-type: none;
+    font-size: smaller;
 }
-.about
+#about
 {
+    background-color: rgb(185, 250, 6);
+}
+#stay
+{
+    background-color:rgb(253, 253, 7);
+}
+#help
+{
+    background-color: rgb(255, 208, 0);
+}
+#about #stay #help
+{
+    display:flex;
+    flex-flow:row wrap;
     text-align: left;
     color: #000;
-    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
 }
-.stay
+#about h5 #stay h5 #help h5
 {
-    text-align: left;
-    color: #000;
-    box-sizing: border-box;
+    text-align:left ;
+    color:black;
+    margin-left:2rem ;
 }
-.help
+#about ul
 {
+    margin-top:2rem;
+    margin-left:-6rem;
     text-align: left;
-    color: #000;
-    box-sizing: border-box;
+
+}
+
+#stay ul
+{
+    margin-top:2rem;
+    margin-left:-3rem; 
+    text-align:left;
+
+}
+
+#help ul
+{
+    margin-top:2rem;
+    margin-left:-3.2rem; 
+    text-align-last: left;
 }
