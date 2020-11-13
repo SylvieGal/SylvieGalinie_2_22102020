@@ -10,9 +10,7 @@
     <body>
        
         <header style="background-color: rgb(236, 200, 200);">
-                <img src="images/logo/Reservia.svg" alt="Logo de Réservia" />
-           
-           
+            <img src="images/logo/reservia.svg" alt="Logo de Réservia" />
             <nav>
                 <ul>
                     <li><a href="#stay">Hébergements</a></li>
@@ -20,34 +18,37 @@
                     <li><a href="#inscription">S'inscrire</a></li>
                 </ul>
             </nav>
-            <div class="note" style ="background-color: rgb(250, 124, 124);">
-                <strong>Trouvez votre hébergement pour des vacances de rêve.</strong>
-                En plein centre  ville ou en pleine nature.
+        </header>
+        <section>
+            <div class="motto" style ="background-color: rgb(250, 124, 124);">
+                <h4>Trouvez votre hébergement pour des vacances de rêve.</h4>
+                <p>En plein centre  ville ou en pleine nature.</p>
             </div>
-            <form class="dest" >
+            <form id="place">
 
                 <!--boite de dialogue pour choisir la destination-->
-                <div style="background-color: red;" >
-                    
+                <div style="background-color: red;">
+                   
                     <i class="fas fa-map-marker-alt"fa-2x></i>
-                    <input type="text" name="Marseille" value="Marseille"/>
-                    <input text="submit" name="Rechercher" value="Rechercher">                    <!--charger la page de la destination donnée par le visiteur-->
+                    <input type="text" name="Marseille" value="Marseille,France"/>
+                    <input text="submit" name="Rechercher" value="Rechercher">
+                    <!--charger la page de la destination donnée par le visiteur-->
                 </div>
             
                 
                 <div class="filters" style="background-color:rgb(148, 225, 228) ;">
-                    <h5>Filtres</h5>
+                    <h4>Filtres</h4>
                         <button>
-                        <i class="fas fa-money-bill-wave-alt" fa-2x></i><!--<button type=button>-->Economique<!--</button>-->
+                            <i class="fas fa-money-bill-wave-alt" fa-2x></i><!--<button type=button>-->Economique<!--</button>-->
                         </button>
                         <button>
-                        <i class="fas fa-child" fa-2x></i>Familial
+                            <i class="fas fa-child" fa-2x></i>Familial
                         </button> 
                         <button>
-                        <i class="fas fa-heart" fa-2x></i><!--<button type=button>-->Romantique
+                            <i class="fas fa-heart" fa-2x></i><!--<button type=button>-->Romantique
                         </button>
                         <button>
-                        <i class="fas fa-dog" fa-2x></i><!--button type=button--> Animaux autorisés
+                            <i class="fas fa-dog" fa-2x></i><!--button type=button--> Animaux autorisés
                     </button>
                     
                 </div>
@@ -55,7 +56,7 @@
             
             <p style="background-color: rgb(151, 109, 151);"><i class="fas fa-exclamation-circle"fa-2x></i>Plus de 500 logements disponibles dans cette ville</p>
                     
-        </header> 
+        </section> 
         <section style="background-color: rgb(194, 233, 233);">
             <header>
                 <h4 id="accomodation">Hébergements à Marseille</h4>
@@ -111,7 +112,7 @@
                    </figure>
                 </a>
             </article>
-            <article style="   background-color:rgb(0, 47, 255);">
+            <article style="   background-color:rgb(106, 120, 184);">
                 <a href="#panier">
                     <figure>
                         <img src="images/hebergements/21223916196_052403.jpg" alt="Auberge Le Panier"/>
@@ -135,12 +136,13 @@
                         </figure>
                     </a>
             </article>
-                    <p><a href="display.html">Afficher plus</a></p>
+            <p><a href="display.html">Afficher plus</a></p>
                     
-            </article>  
+        </section>
+        <section>
 
-            <h3>Les plus populaires</h3><i class="fas fa-chart-line"fa-2x></i>
-
+            <h3 id="pop" style="background-color: magenta;">Les plus populaires</h3><i class="fas fa-chart-line"fa-2x></i>
+            
             <article style="background-color: rgb(150, 230, 21);">
                 
                     <a href="#soleil">
@@ -180,7 +182,7 @@
             </article>
         </section>
         <aside style="background-color: rgb(241, 216, 233);">
-           <h2 id="Visit">Activités à Marseille</h2>
+            <h2 id="Visit">Activités à Marseille</h2>
             
             <article style="background-color: rgb(238, 238, 187);">
                 <a href="#port">
