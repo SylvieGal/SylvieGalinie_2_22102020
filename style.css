@@ -61,12 +61,27 @@ nav ul li
     margin-top:0px;
      
 }
-
+@media all and (max-width:64rem)
+{
+    nav
+    {
+        width:auto;
+        text-align:left ;
+    }
+    nav ul
+    {
+        flex-direction: column;
+    }
+    nav li
+    {
+        padding-left:.25rem;
+    }
+}
 /*placement du slogan */
-.motto 
+.slogan 
 {
     width: auto;
-    height:5rem;
+    height:8rem;
     display: flex;
     padding:3px 120px 10px 10px;
 
@@ -74,14 +89,33 @@ nav ul li
     align-items:flex-start;
 }
 
-.motto h4
+.slogan h4
 {
+    font-size: 2.5rem;
     font-weight: bold;
+    padding-top:1.5rem;
 }
-.motto p
+.slogan p
 {
-    
-    margin: 2.5rem 0rem 5rem 0rem;
+    justify-self: start;
+    align-self:start; 
+    padding: 4rem 0rem 2rem 0rem;
+}
+@media all and (max-width:64rem)
+{
+    .slogan
+    {
+        width:auto;
+        text-align:left ;
+    }
+    .slogan h4
+    {
+        padding-left:.25rem;
+    }
+    .slogan p
+    {
+        padding-left:.25rem;
+    }
 }
 /*placement de la boite de dialogue pour la destination*/
 #place div
@@ -113,7 +147,26 @@ nav ul li
     padding: .5rem;
     border-radius: 1rem 0rem 0rem 1rem;   
 }
-
+@media all and (max-width:64rem)
+{
+    #place div
+    {
+        width:auto;
+        text-align:left ;
+    }
+    #place>div>input[text=submit]
+    {
+        flex-direction: row;
+    }
+    #place>div>input[type=text]
+    {
+        padding-left:.25rem;
+    }
+    #place>div>i
+    {
+        padding-left: .17rem;
+    }
+}
 /*insertion de l'icone dans cadre dest */ 
 /*#dest input::before
 {
@@ -130,6 +183,13 @@ nav ul li
     align-self:flex-start;
    
 }
+.filters h4
+{
+    font-weight: bold;
+    font-size: 1.3rem;
+    justify-self: start;
+    align-self: start;
+}
 /*placement des filtres*/
 .filters button
 {
@@ -144,7 +204,24 @@ nav ul li
     border: .2px solid rgb(182, 180, 180);
     
     border-radius:1rem ;
+    
        
+}
+@media all and (max-width:64rem)
+{
+   #place .filters
+    {
+        width:auto;
+        text-align:left ;
+    }
+    .filters button
+    {
+        flex-direction: column;
+    }
+    .filters h4
+    {
+        padding-left:.25rem;
+    }
 }
 form i /*::after*/
 {
@@ -155,7 +232,7 @@ form i /*::after*/
     margin: 0 0.5rem 0 0;
     padding: 0 .2rem;
     text-align:center;
-    
+    font-weight: bold;
 }
 form div
 {
@@ -164,7 +241,6 @@ form div
 }
 p i
 {
-    
     margin:.1rem;
     display:flex;
     position :relative;
@@ -173,11 +249,11 @@ p i
     align-items: flex-start;
   
 }
-#place.filters:hover
+.filters:hover
 {
-    
-    background-color: rgb(152, 224, 134);
+   background-color: rgb(152, 224, 134);
 }
+
 /* mise en couleur des icones des filtres*/
 .filters i 
 {
