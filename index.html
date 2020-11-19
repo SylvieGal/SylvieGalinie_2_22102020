@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width-device-width, initial-scale=1" />
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet"media="screen and(min-width:50rem) and (max-width:80rem)"href="petite_resolution.css"/>
         <script src="https://kit.fontawesome.com/cadfef2fa3.js" crossorigin="anonymous"></script>
         <title>Marseille</title>
     </head>
@@ -24,6 +25,7 @@
                 <h4>Trouvez votre hébergement pour des vacances de rêve.</h4>
                 <p>En plein centre  ville ou en pleine nature.</p>
             </div>
+
             <form id="place">
 
                 <!--boite de dialogue pour choisir la destination-->
@@ -34,27 +36,26 @@
                     <input text="submit" name="Rechercher" value="Rechercher">
                     <!--charger la page de la destination donnée par le visiteur-->
                 </div>
-            
-                
+                            
                 <div class="filters" style="background-color:rgb(148, 225, 228) ;">
                     <h4>Filtres</h4>
                         <button>
-                            <i class="fas fa-money-bill-wave-alt" fa-2x></i><!--<button type=button>-->Economique<!--</button>-->
+                            <i class="fas fa-money-bill-wave-alt" fa-2x></i><!--<button type=button>--><strong>Economique</strong><!--</button>-->
                         </button>
                         <button>
-                            <i class="fas fa-child" fa-2x></i>Familial
+                            <i class="fas fa-child" fa-2x></i><strong>Familial</strong>
                         </button> 
                         <button>
-                            <i class="fas fa-heart" fa-2x></i><!--<button type=button>-->Romantique
+                            <i class="fas fa-heart" fa-2x></i><!--<button type=button>--><strong>Romantique</strong>
                         </button>
                         <button>
-                            <i class="fas fa-dog" fa-2x></i><!--button type=button--> Animaux autorisés
-                    </button>
+                            <i class="fas fa-dog" fa-2x></i><!--button type=button--><strong>Animaux autorisés</strong>
+                        </button>
                     
                 </div>
             </form>
             
-            <p style="background-color: rgb(151, 109, 151);"><i class="fas fa-exclamation-circle"fa-2x></i>Plus de 500 logements disponibles dans cette ville</p>
+            <p style="background-color: rgb(151, 109, 151);"><i class="fas fa-exclamation-circle"fa-2x></i><span>Plus de 500 logements disponibles dans cette ville</></p>
                     
         </section> 
         <section style="background-color: rgb(194, 233, 233);">
@@ -141,7 +142,7 @@
         </section>
         <section>
 
-            <h3 id="pop" style="background-color: magenta;">Les plus populaires</h3><i class="fas fa-chart-line"fa-2x></i>
+            <h3 id="best-sales" style="background-color: magenta;">Les plus populaires</h3><i class="fas fa-chart-line"fa-2x></i>
             
             <article style="background-color: rgb(150, 230, 21);">
                 
@@ -195,7 +196,7 @@
                 </a>
             </article>
             <article style="background-color: rgb(248, 121, 216);">        
-                <a href="#Pomègues">
+                <a href="#pomegues">
                     <figure>
                          <img src ="images\activites\21223916196_055518.jpg"alt="Fort de Pomègues"/>
                         <figcaption>
@@ -205,7 +206,7 @@
                 </a>
             </article>
             <article style="background-color: skyblue;"> 
-                <a href="#Frioul"> 
+                <a href="#frioul"> 
                     <figure>                        
                         <img src="images/activites/21223916196_060214.jpg"alt="Îles du Frioul"/>
                         <figcaption>
