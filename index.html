@@ -2,9 +2,8 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width-device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet"media="screen and(min-width:50rem) and (max-width:80rem)"href="petite_resolution.css"/>
         <script src="https://kit.fontawesome.com/cadfef2fa3.js" crossorigin="anonymous"></script>
         <title>Marseille</title>
     </head>
@@ -14,14 +13,14 @@
             <img src="images/logo/reservia.svg" alt="Logo de Réservia" />
             <nav>
                 <ul>
-                    <li><a href="#stay">Hébergements</a></li>
-                    <li><a href="#activities">Activités</a></li>
-                    <li><a href="#inscription">S'inscrire</a></li>
+                    <li><a id="stay">Hébergements</a></li>
+                    <li><a id="activities">Activités</a></li>
+                    <li><a id="inscription">S'inscrire</a></li>
                 </ul>
             </nav>
         </header>
         <section>
-            <div class="slogan" style ="background-color: rgb(250, 124, 124);">
+            <div style ="background-color: rgb(250, 124, 124);">
                 <h4>Trouvez votre hébergement pour des vacances de rêve.</h4>
                 <p>En plein centre  ville ou en pleine nature.</p>
             </div>
@@ -31,8 +30,8 @@
                 <!--boite de dialogue pour choisir la destination-->
                 <div style="background-color: red;">
                    
-                    <i class="fas fa-map-marker-alt"fa-2x></i>
-                    <input type="text" name="Marseille" value="Marseille,France"/>
+                    <i class="fas fa-map-marker-alt fa-2x"></i>
+                    <input type="text" name="Marseille" value="Marseille, France"/>
                     <input text="submit" name="Rechercher" value="Rechercher">
                     <!--charger la page de la destination donnée par le visiteur-->
                 </div>
@@ -40,22 +39,21 @@
                 <div class="filters" style="background-color:rgb(148, 225, 228) ;">
                     <h4>Filtres</h4>
                         <button>
-                            <i class="fas fa-money-bill-wave-alt" fa-2x></i><!--<button type=button>--><strong>Economique</strong><!--</button>-->
+                            <i class="fas fa-money-bill-wave-alt fa-1x"></i><!--<button type=button>-->Economique<!--</button>-->
                         </button>
                         <button>
-                            <i class="fas fa-child" fa-2x></i><strong>Familial</strong>
+                            <i class="fas fa-child fa-1x"></i>Familial
                         </button> 
                         <button>
-                            <i class="fas fa-heart" fa-2x></i><!--<button type=button>--><strong>Romantique</strong>
+                            <i class="fas fa-heart fa-1x"></i><!--<button type=button>-->Romantique   
                         </button>
                         <button>
-                            <i class="fas fa-dog" fa-2x></i><!--button type=button--><strong>Animaux autorisés</strong>
-                        </button>
+                            <i class="fas fa-dog fa-1x"></i><!--button type=button-->Animaux autorisés                        </button>
                     
                 </div>
             </form>
             
-            <p style="background-color: rgb(151, 109, 151);"><i class="fas fa-exclamation-circle"fa-2x></i><span>Plus de 500 logements disponibles dans cette ville</></p>
+            <p style="background-color: rgb(151, 109, 151);"><i class="fas fa-exclamation-circle fa-1x"></i><span>Plus de 500 logements disponibles dans cette ville</span></p>
                     
         </section> 
         <section style="background-color: rgb(194, 233, 233);">
