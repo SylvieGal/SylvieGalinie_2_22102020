@@ -1,0 +1,118 @@
+:root {
+    font-size: 8px;
+}
+
+body {
+    grid-template-areas:
+        "navbar"
+        "search"
+        "best-sales"
+        "accomodation"
+        "visit"
+        "footer";
+    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+} /*
+#navbar {
+    width: auto;
+    text-align: left;
+}
+#stay {
+    border-top: none;
+    border-bottom: 3px solid rgb(21, 115, 255);
+}*/
+#search header {
+    margin-left: 1rem;
+}
+/*#spot > button {
+    display: none;
+    width: 4rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 0;
+    background:url('https://fontawesome.com/icons/search?style=solid') #0065fc;
+    color:white;
+}
+#spot > button i {
+    display: block;
+}*/
+#best-sales figure {
+    width: 100%;
+    height: 95%;
+}
+#best-sales img {
+    width: 40%;
+    height: 100%;
+}
+#best-sales figcaption {
+    margin-top: 4rem;
+}
+
+#accomodation {
+    grid-template-areas:
+        "accomodation_header"
+        "accomodation_card-one"
+        "accomodation_card-two"
+        "accomodation_card-three"
+        "accomodation_card-four"
+        "accomodation_card-five"
+        "accomodation_card-six"
+        "accomodation_footer";
+
+    grid-gap: 2rem;
+    grid-template-rows: 120px;
+    display: inline-block; /*pour placer les cartes en colonne*/
+    justify-content: start;
+    padding: 2rem;
+}
+#accomodation figure {
+    height: 270px;
+}
+#accomodation img {
+    height: 75%;
+}
+#accomodation figcaption {
+    width: 100%;
+    word-wrap: break-word;
+}
+#visit {
+    grid-template-areas:
+        "visit_header"
+        "visit_cardone"
+        "visit_cardtwo"
+        "visit_cardthree"
+        "visit_cardfour"
+        "visit_cardfive"
+        "visit_cardsix";
+
+    grid-template-rows: 100px;
+    display: inline-block; /*pour placer les cartes en colonne*/
+    justify-content: start;
+
+    padding: 2rem;
+}
+#visit a[href="#port"]figure,
+#visit a[href="#calanques"]figure {
+    display: block;
+    height: 0%;
+}
+#visit figure {
+    width: auto;
+    height: 30rem;
+}
+#visit a[href="#port"]img,
+#visit a[href="#calanques"]img {
+    display: block;
+    height: 0%;
+}
+#visit img {
+    height: 87%;
+}
+#footer {
+    grid-template-areas:
+        "footer_about"
+        "footer_stay"
+        "footer_help";
+    grid-gap: 1.5rem;
+    word-wrap: normal;
+}

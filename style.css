@@ -1,558 +1,545 @@
-:root
-{
+:root {
     font-size: 10px;
 }
 
-*
-{
+* {
     box-sizing: border-box;
 }
 
-html
-{
-    font-family: "Raleway",sans-serif ;
-    background-color: #f2f2f2;
+html {
+    font-family: "Raleway", sans-serif;
 }
-
-body
-{
+#navbar {
+    grid-area: navbar;
+}
+#search {
+    grid-area: search;
+}
+#accomodation {
+    grid-area: accomodation;
+}
+#best-sales {
+    grid-area: best-sales;
+}
+#visit {
+    grid-area: visit;
+}
+#footer {
+    grid-area: footer;
+}
+body {
+    /* definition de la grille avec designation de l'area*/
     margin: 0;
-
+    display: grid;
+    grid-template-areas:
+        "navbar navbar"
+        "search search"
+        "accomodation best-sales" /*placement du cadre les plus populaires à cote d accomodation*/
+        "visit visit"
+        "footer footer";
+    grid-template-columns: [accomodation] 2fr [best-sales] 1fr; /* taille de colonne . ici 2 différentes*/
+    grid-gap: 1rem;
 }
 
-h1, h2, h3, h4, h5, h6 
-{
+h1, h2, h3, h4, h5, h6 /*definition commune aux différents titres*/ {
     font-size: 10px;
     font-weight: 400;
 }
+.navbar_card-1 {
+    grid-area: card-1;
+}
+.navbar_card-2 {
+    grid-area: card-2;
+}
 
-header 
-{
-    display:flex;
-    justify-content: space-between;
-    align-items:flex-end;
-    height:8rem;
-
-}   
-header img 
-{
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding:1.5rem 0rem 1.5rem 0rem;
+#navbar /*placement des card l'1 par rapport à l'autre*/ {
+    display: grid;
+    grid-template-areas: "card-1 card-2";
+    grid-gap: 2rem;
+    grid-template-rows: 6rem;
+    grid-template-columns: 1fr 2fr;
+    background-color: rgb(228, 224, 224);
+}
+#navbar img {
+    margin-left: 1rem;
 }
 
 /*positionnement box du menu suppression des puces*/
-nav ul
-{    
-    font-size: 1.2rem;
-    list-style-type: none;
-    display:flex;
-    flex-direction:row;
-    justify-content:flex-end; 
-    align-items:top;
-    padding:0px 150px 30px 0px;
-
-}   
-/*positionnement du menu dans la box */ 
-nav ul li
-{  
-    margin-right:15px;  
-    margin-top:0px;
-     
-}
-nav #stay
-{
-    
-    margin-top:0rem;
-    border-top:2px solid rgb(21, 115, 255);
-    padding-top: 2.25rem;
-    color:  rgb(21, 115, 255);
-    
-}
-nav #activities
-{
-    color: black;
-}
-nav #inscription
-{
-    font-weight: bold;
-    color: rgb(21,115,255);
-}
-@media all and (max-width:64rem)
-{
-    nav
-    {
-        width:auto;
-        text-align:left ;
-    }
-    nav ul
-    {
-        flex-direction: column;
-    }
-    nav li
-    {
-        padding-left:.25rem;
-    }
-}
-/*placement du slogan */
-div 
-{
-    font-size: 1.2rem;
-    width: auto;
-    height:8rem;
-    position:relative;
+nav ul {
     display: flex;
-    padding:3px 120px 10px 10px;
-    flex-flow:row wrap;
-    justify-content: flex-start;
-    align-items:flex-start;
+    justify-content: flex-end;
+    align-content: center;
+
+    font-size: 1.4rem;
+    list-style-type: none;
+}
+/*positionnement du menu dans la box */
+nav ul li {
+    margin: 0 2rem;
+    padding-top: 0rem;
+    display: block; /*pour isoler chaque li */
+}
+#stay {
+    margin-top: 0rem;
+    border-top: 3px solid rgb(21, 115, 255);
+    padding: 1rem 1rem 0 1rem; /*pour placer la barre en top apres le display:block du nav ul li*/
+    color: rgb(21, 115, 255);
+}
+#activities {
+    color: black;
+    display: inline-block;
+}
+#inscription {
+    font-weight: bold;
+    color: rgb(21, 115, 255);
+}
+.search_card1 {
+    grid-area: card1;
+    padding: 1rem;
+}
+.search_card2 {
+    grid-area: card2;
 }
 
-div h4
-{
-    font-size: 1.5rem;
+#search {
+    display: grid;
+    grid-template-areas:
+        "card1 "
+        "card2 ";
+    grid-gap: 1rem;
+}
+#search header {
+    margin-left: 1rem;
+}
+#search h4 {
     font-weight: bold;
-    padding-top: 1rem;
-    padding-left: 0rem;
+    font-size: 1.2rem;
 }
-div p
-{
-    position: absolute;
-    float: left;
-    padding: 3rem 0rem 0rem 0rem;
-        
-}
-@media all and (max-width:64rem)
-{
-    div
-    {
-        width:auto;
-        text-align:left ;
-    }
-    div h4
-    {
-        padding-left:.25rem;
-    }
-    div p
-    {
-        padding-left:.25rem;
-    }
+/*mise en page des paragraphes*/
+#search p {
+    font-size: 1rem;
 }
 /*placement de la boite de dialogue pour la destination*/
-#place div
-{
-    width:auto;
-    height: 2.95rem;
-    position:relative;
-    border: .2px solid rgb(182, 180, 180);
-    
-
-}/*background pour le bouton rechercher */
-#place > div > input[text=submit]
-{
+#spot {
+    display: flex;
+}
+.place_card1 {
+    grid-area: place_card1;
+}
+.place_card2 {
+    grid-area: place_card2;
+}
+#place {
+    display: grid;
+    grid-template-areas:
+        "place_card1"
+        "place_card2";
+    grid-gap: 2rem;
+    margin-left: 1rem;
+}
+/*background pour le bouton rechercher */
+#spot > button {
+    width: 10rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    background-color: #0065fc;
+    border-radius: 0 1rem 1rem 0;
     color: white;
-    background-color:#0065FC;
-    border-radius:0rem 1rem 1rem 0rem;
-    line-height:2.95rem;
-    width:10rem;
-    border: .2px solid rgb(182, 180, 180);
-    text-align:center;
-
+    border: none;
+}
+#spot > button i {
+    display: none;
 }
 /*mise en gras du texte de l input */
-#place>div>input[type=text]
-{
-    width:18rem;
-    font-weight:bold;
-    border: .2px solid rgb(182, 180, 180);
-    border-radius: 1rem 0rem 0rem 1rem;
-    line-height:2.95rem;   
-    margin-left: -.5rem;
+#spot > input[type="text"] {
+    width: 16rem;
+    height: 3rem;
+    line-height: 3rem;
     text-align: center;
-}
-/*presentation de l icone*/
-#place>div>i
-{
-    position:absolute;
-    background-color: rgb(228, 224, 224) ;
-   
-    text-align: center;
-    width: 2.95rem;
-    height: 2.95rem;
-    font-size: small;
-    padding: 0rem 0rem 0rem .2rem;
-    border-radius: 1rem 0rem 0rem 1rem;  
-    border: .2px solid rgb(182, 180, 180);
-    line-height:2.90rem;
-    display:flex;
-    justify-content: center;
-    align-items: center; 
-}
-i, input[type=text]
-{
-    padding-left: .8rem;
-    background-position-x: left;
-   
-}
-@media all and (max-width:64rem)
-{
-    #place div
-    {
-        width:auto;
-        text-align:left ;
-    }
-    #place>div>input[text=submit]
-    {
-        flex-direction: row;
-    }
-    #place>div>input[type=text]
-    {
-        padding-left:.25rem;
-    }
-    #place>div>i
-    {
-        padding-left: .17rem;
-    }
-}
-
-#place .filters
-{   
-    width:auto;
-    
-    margin:1.2rem 2rem 2rem 0rem ;
-    display: flex;
-    justify-self: flex-start;
-    align-self:flex-start;
-   
-}
-.filters h4
-{
     font-weight: bold;
-    font-size: 1.3rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin:0rem .5rem .5rem -.5rem ;
-    text-align: center;
+    color: black;
+    border: none;
 }
-/*placement des filtres*/
-.filters button
-{
-    width:18rem;
-    height:3rem;
-    float: left;
-    text-align:center;
-    flex-flow:row nowrap;
-    justify-content:flex-start space-around;
-    align-items: center;
-    margin:.4rem 5px 30px 5px;
-    padding-left: .4px;
-    padding-top:.06rem;
-    border: .2px solid rgb(182, 180, 180);
-    border-radius:1.65rem ;
-    line-height: 2.5rem;
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-
-
-.filters button:hover
-{
-   color: rgb(54, 2, 2);
-}
-.filters button:focus
-{
-    border:5px 2px green;
-}
-.filters button:visited
-{
-    color :rgb(27, 27, 252);
-    border:rgb(3, 3, 161);
-}
-@media all and (max-width:64rem)
-{
-   #place .filters
-    {
-        width:auto;
-        text-align:left ;
-    }
-    .filters button
-    {
-        flex-direction: column;
-    }
-    .filters h4
-    {
-        padding-left:.25rem;
-    }
-}
-form i 
-{
-    position:relative;
-    float:left;
-    font-size: x-small;
+/*mise en page et placement de l icone dans place*/
+#spot i {
     width: 3rem;
-    height:2.9rem;
-    border-radius:50% ;
-    line-height: 2.45rem;
-    font-weight: bold;
-    display:flex;
-    justify-content: center;
-    align-items: center; 
-   
-}
-form div
-{
-    display: flex;
-    flex-flow:row wrap;
-}
-p
-{
-    font-size:1.5rem;
-    font-weight: none;
-    margin:2rem 2rem 2rem 0.3rem;
-    display:flex;
-    position :relative;
-    flex-flow:row nowrap;
-    justify-content:flex-start ;
-    align-items: flex-start;
-  
-}
-/*alignement p sur filter*/
-p i span
-{
-    font-size: 1.5rem;
-    position:absolute;
-    float:left;
-    text-align: left;
-}
-/* mise en couleur des icones des filtres*/
-.filters i 
-{
-   
-    display:inline-block;
+    height: 3rem;
+    line-height: 3rem;
     text-align: center;
-    color:#0065FC;
-    background-color: #b8d0f3;
-    padding:2px 0px 0px 0px;
-    border-radius:50%;
-    line-height:2.5rem;  
-    justify-content: space-around;
-    align-content: center;
-    
+    background-color: rgb(228, 224, 224);
+    border-radius: 1rem 0 0 1rem;
 }
-/* mise en couleur des icones autre que filtres et etoiles*/
-/* et positionnement par rapport au span */
-p i
-{
-   
-    color: #0065FC;
-    text-align:left;
-    float:left;
-    margin-left :-1rem;
-    position:static;    
-}
-p span 
-{
-    font-size: 1.2rem;
-}
-@media all and (max-width:64rem)
-{
-   p
-    {
-        width:auto;
-        text-align:left ;
-    }
-    p i span
-    {
-        flex-direction: column;
-    }
-    p i
-    {
-        padding-left:3.5rem;
-    }
-}
-/*placement box hebergements*/
-#accomodation
-{
-    width:75%;
-    height:25rem;
-    display:flex;
-    position:relative;
-    flex-flow:row nowrap;
-    justify-content:none;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin: -10rem 0rem -10rem 2rem;
-    text-align: left;
-   /*border:.2px solid rgb(182,180,180) ;*/
-    border-radius: 15px;
-   /* padding: 10px;*/
-    /*background-color: rgb(255, 255, 255);*/
-   
-  
-}
-/*creation de la carte avec img legende*/
-#accomodation article
-{
-    display:flex;
-    position: absolute;
-    width:auto;
-    height:auto;
-    border-radius: 0rem 0rem 1rem 1rem;
-    background-color: rgba(228, 224, 224,0.8);
-    color:black;
-    flex-flow:row nowrap;
-    justify-content: space-around;
+#filters/* mise en page cadre*/ {
+    height: 3rem;
+    line-height: 3rem;
+    margin: 1rem 0;
+    display: flex; /* concerne  toute la boite filters et place les differents button cote à cote */
 
+    text-align: center;
+    background-color: white;
 }
-figure 
-{
-    width:16rem;
-    height:16rem;
-    border:.5rem solid rgb(255, 255, 255);
-    box-shadow:5px 5px 5px rgb(221, 220, 220);
+/* mise en page element du filters*/
+#filters > h4 {
+    font-size: 1.2rem;
+    margin: 1rem;
+    font-weight: bold;
+    align-self: center;
+}
+#filters button {
+    width: auto;
+    height: 3rem;
+    line-height: 3rem;
+    margin: 0 1rem;
+
+    border: 0.1rem solid rgb(233, 227, 227);
+    border-radius: 2rem;
     background-color: #fff;
-    border-radius: 15px 15px 15px 15px;
-    justify-content: space-around;
-    margin:0rem 15px 0rem 1rem;
-    padding-top:0rem;
-    display:grid;
-    grid-gap:-0.5rem;
-
-}
-/*placement legende sous la photo*/
-#accomodation figcaption 
-{
-    width:25rem;
-    height:15rem;
-    display:flex; 
-    position: absolute;
-    flex-flow:row nowrap;
-    justify-content:none;
-    align-content: none;
-    object-fit:contain;    
-}
-figcaption h5
-{
-    font-size: 1.2rem;
-    color:black;
     font-weight: bold;
-    text-decoration: none; 
-    border-style: none;
-    margin-top: .3rem;
-    padding-top:.3rem;
 }
-/*taille des info complémentaires de la légende photo*/    
-#accomodation figcaption span
-{
-    font-size: 1.15rem;
-    height:20px;
-    margin-top: 0rem;
-    margin-bottom: 4.5rem;
-    padding-bottom: 5rem;
-    background-position: 0rem 0rem, top;
-    border-style: none;
+#filters button span {
+    padding: 1rem;
+}
+
+#filters >button i /*mise en place des icones dans les boutons*/ {
+    width: 3rem;
+    margin: -0.1rem 0 0 -0.8rem;
+    line-height: 3rem;
+    border-radius: 50%;
+    color: #0065fc;
+    background-color: #b8d8f3;
+}
+#filters button:hover {
+    border: rgb(3, 3, 161);
+    background-color: rgb(178, 214, 231);
+}
+#filters button:focus {
+    border: 5px 2px green;
+}
+#filters button:visited {
+    border: rgb(134, 7, 7);
+}
+/*mise en couleur de l'icone de paragraphe */
+
+#search p i {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #0065fc;
+}
+/*figcaption p {
+    margin-bottom: 3.5rem;
+}*/
+/* definition grid de la carte accomodation*/
+.accomodation_header {
+    grid-area: accomodation_header;
+}
+.accomodation_card_one {
+    grid-area: accomodation_card_one;
+}
+.accomodation_card_two {
+    grid-area: accomodation_card_two;
+}
+.accomodation_card_three {
+    grid-area: accomodation_card_three;
+}
+.accomodation_card_four {
+    grid-area: accomodation_card_four;
+}
+.accomodation_card_five {
+    grid-area: accomodation_card_five;
+}
+.accomodation_card_six {
+    grid-area: accomodation_card_six;
+}
+.accomodation_footer {
+    grid-area: accomodation_footer;
+}
+#accomodation /* cadre accomodation*/ {
+    display: grid;
+    grid-template-areas:
+        "accomodation_header accomodation_header accomodation_header"
+        "accomodation_card_one accomodation_card_two accomodation_card_three"
+        "accomodation_card_four accomodation_card_five accomodation_card_six"
+        "accomodation_footer accomodation_footer accomodation_footer";
+    grid-gap: 2rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgb(228, 224, 224);
+}
+#accomodation a {
+    display: block;
+    width: 100%;
     text-decoration: none;
-    color:black;
-    
+    color: black;
 }
-/* mise en couleur et positionnement des étoiles */
-#accomodation figcaption i
-{
-    color: #0065FC;
-    display:flex;
-    flex-flow:row nowrap; 
-    justify-items: left ;
-    align-items:left;
-    margin: 1.1rem 0rem 1rem -4rem;
-    line-height: 1.1rem;
-    object-fit: scale-down;/*redimensionnement de la taille de img*/
-    
-    
+#accomodation h4 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
 }
-/* angles haut arrondis et redimensionnement des images  */ 
-img
-{
-    border-radius:15px 15px 0px 0px;
-    /*redimensionnement de img avec parametres propres à ce img*/
-    width: 150px;
-    height:8rem;
-    object-fit: fill;
+#accomodation figure /* cadre de carte*/ {
+    margin: 0;
+    width: auto;
+    height: 30rem;
+    border: 0.5rem solid rgb(255, 255, 255);
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px rgb(221, 220, 220);
+    background-color: #fff;
+    color: black;
 }
-/*placement des cartes hebergements*/
-#canne #port #mouettes
-{
-    display:grid;
-    grid-template-rows:1fr;
-    grid-template-columns:5rem 5rem 5rem;
-    grid-area:1/1/2/4;
-    grid-gap:15px;
-    flex-flow:row nowrap;
+#accomodation img {
+    object-fit: cover;
+    width: 100%;
+    height: 19.3rem;
+    line-height: 193px;
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+/*legend */
+#accomodation figcaption {
+    margin-left: 1rem;
+    text-decoration: none;
+}
+#accomodation figcaption h5 {
+    margin: 0rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    word-wrap: break-word;
+    text-decoration: none;
+}
+#accomodation figcaption p {
+    margin: 0rem;
+    padding-top: 1rem;
+    font-size: 1.4rem;
+}
+.blue {
+    display: inline-block;
+    color: #0065fc;
+}
+.grey {
+    display: inline-block;
+    color: silver;
+}
+#accomodation figcaption i {
+    /* margin-bottom: 1rem;*/
+    padding-top: 1rem;
+}
+#accomodation footer {
+    padding-top: 2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+/* definition grid du best sales */
+.best-sales_header {
+    grid-area: best-sales_header;
+}
+.best-sales_card1 {
+    grid-area: best-sales_card1;
+}
+.best-sales_card2 {
+    grid-area: best-sales_card2;
+}
+.best-sales_card3 {
+    grid-area: best-sales_card3;
+}
+#best-sales/*cadre les plus populaires */ {
+    display: grid;
+    grid-template-areas:
+        "best-sales_header "
+        "best-sales_card1"
+        "best-sales_card2"
+        "best-sales_card3";
+
+    grid-gap: 2rem;
+    grid-template-rows: 50px repeat(3, 140px);
+    grid-template-columns: 1fr;
+    border-radius: 1.5rem;
+    background-color: rgb(228, 224, 224);
+}
+.best-sales_image {
+    grid-area: best-sales_image;
+}
+.best-sales_figcaption {
+    grid-area: best-sales_figcaption;
+}
+#best-sales figure /* cadre de carte*/ {
+    display: flex; /* pour placer cote a cote img et figcaption*/
+
+    height: 180px;
+    margin: 0;
+    border: 0.5rem solid rgb(255, 255, 255);
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px rgb(221, 220, 220);
+    background-color: #fff;
+    color: black;
+}
+#best-sales a {
+    text-decoration: none;
+}
+#best-sales header {
+    display: flex;
+    font-size: 1.8rem;
+    justify-content: space-between; /* pour separer le titre de l'icone*/
+    font-weight: bold;
+}
+#best-sales h4 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+/* placement icône titre */
+#best-sales header i {
+    display: inline-block; /*pour placer le block et le marger seul*/
+}
+#best-sales img {
+    object-fit: cover;
+    padding-right: 5px;
+    width: 35%;
+    height: 100%;
+    border-radius: 1rem 0rem 0rem 1rem;
+}
+
+/*legend */
+#best-sales figcaption {
+    padding: 1rem;
+    width: 65%;
+    font-size: 1rem;
+    position: relative;
+}
+
+#best-sales figcaption h5 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+#best-sales figcaption p {
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+#best-sales figcaption div {
+    position: absolute;
+    bottom: 1rem;
+}
+/*#best-sales a[href="#coeur"] figcaption/* tous les éléments a contenant href coeur aller à figcaption et appliquer la regle*/ /* {
+    margin-top: 4rem;
+}*/
+
+.visit_title {
+    grid-area: visit_title;
+    font-weight: bold;
+}
+.visit_cardone {
+    grid-area: visit_cardone;
+}
+.visit_cardtwo {
+    grid-area: visit_cardtwo;
+}
+.visit_cardthree {
+    grid-area: visit_cardthree;
+}
+.visit_cardfour {
+    grid-area: visit_cardfour;
+}
+.visit_cardfive {
+    grid-area: visit_cardfive;
+}
+.visit_cardsix {
+    grid-area: visit_cardsix;
+}
+#visit {
+    display: grid;
+    grid-template-areas:
+        "visit_title visit_title visit_title visit_title"
+        "visit_cardone visit_cardtwo visit_cardthree visit_cardfour"
+        "visit_cardone visit_cardfive visit_cardthree visit_cardsix";
+
+    padding: 2rem;
+    grid-template-rows: 5rem 30rem 30rem;
+    grid-template-columns: repeat(4, 1fr);
+    border-radius: 1.5rem;
+    background-color: rgb(228, 224, 224);
+}
+#visit h4 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+#visit figure /* cadre de carte*/ {
+    margin: 0;
+    height: 100%;
+    border: 0.5rem solid rgb(255, 255, 255);
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px rgb(221, 220, 220);
+    background-color: #fff;
+    color: black;
+}
+
+#visit a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+}
+#visit img {
+    object-fit: cover;
+    width: 100%;
+    height: 85%;
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+#visit a[href="#port"] figure,
+#visit a[href="#calanques"] figure {
+    display: block;
+    height: 100%;
+}
+/*legend */
+#visit > figcaption {
+    height: 30%;
+    line-height: 60px;
+    padding: 0 5px;
+    text-decoration: none;
+}
+#visit figcaption h5 {
+    margin: 0;
+    padding: 1rem;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#visit a[href="#port"] img,
+#visit a[href="#calanques"] img {
+    display: inline-block;
+    height: 93%;
+}
+
+.footer_about {
+    grid-area: footer_about;
+}
+.footer_stay {
+    grid-area: footer_stay;
+}
+.footer_help {
+    grid-area: footer_help;
+}
+#footer {
+    display: grid;
+    grid-template-areas: "footer_about footer_stay footer_help";
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr); /*largeur de la colonne 30rem*/
+    padding: 2rem;
+}
+
+#footer h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+footer ul {
+    list-style-type: none;
     justify-content: space-around;
+    padding: 0;
 }
-#mer #panier #amina
-{
-    display:grid;
-    grid-template: 1fr/10rem;/*row/col*/
-    grid-area:2/1/3/4;
-    grid-gap:15px;
-    flex-flow:row nowrap;
-    justify-content: space-between;
-    
-}
-
-/*positionnement des cartes htl*/
-#canne
-{
-    
-    justify-self:start;
-    align-self:start;
-    background-position-x: left;
-
-}
-#port
-{
-    
-    flex:none;
-    justify-items:center;
-    align-items: center;
-    background-position-x: 25%;
-    object-fit: fill;
-}
-#mouettes
-{
-    justify-items:end;
-    align-items: end;
-    background-position-x: right 50%;
-
-}
-
-#mer
-{
-    
-    justify-self:flex-start;
-    align-self: flex-start;
-    background-position-x:left;
-    object-fit: scale-down;
-    order:1;
-}
-#panier
-{        
-    justify-content:center;
-    align-items: center;
-    background-position-x: 25%;
-    object-fit: contain;
-    order:2;
-}
-#amina
-{
-     justify-content: flex-end;
-    align-items: flex-end;
-    background-position-x: right 50%;
-    object-fit: scale-down;
-    order:3;
-    
+#footer a {
+    text-decoration: none;
+    color: black;
 }
