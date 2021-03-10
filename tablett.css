@@ -12,33 +12,49 @@ body {
         "footer";
     grid-gap: 2rem;
     grid-template-columns: 1fr;
-} /*
+    grid-template-rows: 1fr;
+}
+
 #navbar {
     width: auto;
     text-align: left;
 }
+#navbar ul {
+    margin: -0.5rem;
+}
 #stay {
     border-top: none;
     border-bottom: 3px solid rgb(21, 115, 255);
-}*/
+    padding: 1rem;
+}
+#activities {
+    display: inline-block;
+    padding-left: 4rem;
+}
+#inscription {
+    display: block;
+    margin-top: -5.5rem;
+}
 #search header {
     margin-left: 1rem;
 }
-/*#spot > button {
+
+#spot > button {
     display: none;
     width: 4rem;
     height: 3rem;
     line-height: 3rem;
     font-size: 0;
-    background:url('https://fontawesome.com/icons/search?style=solid') #0065fc;
-    color:white;
+
+    color: white;
 }
 #spot > button i {
-    display: block;
-}*/
+    display: initial;
+    background-color: #0065fc;
+}
 #best-sales figure {
     width: 100%;
-    height: 95%;
+    height: 100%;
 }
 #best-sales img {
     width: 40%;
@@ -50,19 +66,20 @@ body {
 
 #accomodation {
     grid-template-areas:
-        "accomodation_header"
-        "accomodation_card-one"
-        "accomodation_card-two"
-        "accomodation_card-three"
-        "accomodation_card-four"
-        "accomodation_card-five"
-        "accomodation_card-six"
-        "accomodation_footer";
+        "accomodation_header accomodation_header"
+        "accomodation_card-one accomodation_card-one"
+        "accomodation_card-two accomodation_card-two"
+        "accomodation_card-three accomodation_card-three"
+        "accomodation_card-four accomodation_card-four"
+        "accomodation_card-five accomodation_card-five"
+        "accomodation_card-six accomodation_card-six"
+        "accomodation_footer accomodation_footer";
 
     grid-gap: 2rem;
-    grid-template-rows: 120px;
+    grid-template-rows: 370px;
+    grid-template-columns: 1fr;
     display: inline-block; /*pour placer les cartes en colonne*/
-    justify-content: start;
+    justify-content: space-around;
     padding: 2rem;
 }
 #accomodation figure {
@@ -77,18 +94,19 @@ body {
 }
 #visit {
     grid-template-areas:
-        "visit_header"
-        "visit_cardone"
-        "visit_cardtwo"
-        "visit_cardthree"
-        "visit_cardfour"
-        "visit_cardfive"
-        "visit_cardsix";
+        "visit_header visit_header"
+        "visit_cardone visit_cardone"
+        "visit_cardtwo visit_cardtwo"
+        "visit_cardthree visit_cardthree"
+        "visit_cardfour visit_cardfour"
+        "visit_cardfive visit_cardfive"
+        "visit_cardsix visit_cardsix";
 
-    grid-template-rows: 100px;
+    grid-gap: 2rem;
+    grid-template-rows: repeat(7, 100px);
+    grid-template-columns: 1fr;
     display: inline-block; /*pour placer les cartes en colonne*/
     justify-content: start;
-
     padding: 2rem;
 }
 #visit a[href="#port"]figure,
@@ -103,10 +121,9 @@ body {
 #visit a[href="#port"]img,
 #visit a[href="#calanques"]img {
     display: block;
-    height: 0%;
 }
 #visit img {
-    height: 87%;
+    height: 100%;
 }
 #footer {
     grid-template-areas:
@@ -114,5 +131,7 @@ body {
         "footer_stay"
         "footer_help";
     grid-gap: 1.5rem;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
     word-wrap: normal;
 }

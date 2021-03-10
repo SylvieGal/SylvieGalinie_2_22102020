@@ -45,44 +45,46 @@ h1, h2, h3, h4, h5, h6 /*definition commune aux différents titres*/ {
     font-size: 10px;
     font-weight: 400;
 }
-.navbar_card-1 {
+.nav_card-1 {
     grid-area: card-1;
 }
-.navbar_card-2 {
+.nav_card-2 {
     grid-area: card-2;
 }
 
 #navbar /*placement des card l'1 par rapport à l'autre*/ {
     display: grid;
-    grid-template-areas: "card-1 card-2";
+    grid-template-areas: "nav_card-1 nav_card-2";
     grid-gap: 2rem;
-    grid-template-rows: 6rem;
+    grid-template-rows: 1fr;
     grid-template-columns: 1fr 2fr;
+    padding: 1rem;
     background-color: rgb(228, 224, 224);
 }
-#navbar img {
+nav img {
     margin-left: 1rem;
 }
 
 /*positionnement box du menu suppression des puces*/
 nav ul {
     display: flex;
-    justify-content: flex-end;
-    align-content: center;
+    padding: 0 30rem;
+    position: relative;
+    margin: -5.5rem 0 0 80rem;
 
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     list-style-type: none;
 }
 /*positionnement du menu dans la box */
-nav ul li {
+nav ul a {
     margin: 0 2rem;
-    padding-top: 0rem;
-    display: block; /*pour isoler chaque li */
+    padding-top: 1rem;
+    display: block; /*pour isoler chaque a */
 }
 #stay {
     margin-top: 0rem;
     border-top: 3px solid rgb(21, 115, 255);
-    padding: 1rem 1rem 0 1rem; /*pour placer la barre en top apres le display:block du nav ul li*/
+    padding: 1rem 1rem 0 1rem; /*pour placer la barre en top apres le display:block du nav ul a*/
     color: rgb(21, 115, 255);
 }
 #activities {
@@ -107,6 +109,8 @@ nav ul li {
         "card1 "
         "card2 ";
     grid-gap: 1rem;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
 }
 #search header {
     margin-left: 1rem;
@@ -135,6 +139,8 @@ nav ul li {
         "place_card1"
         "place_card2";
     grid-gap: 2rem;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
     margin-left: 1rem;
 }
 /*background pour le bouton rechercher */
@@ -148,9 +154,9 @@ nav ul li {
     color: white;
     border: none;
 }
-#spot > button i {
+/*#spot > button i {
     display: none;
-}
+}*/
 /*mise en gras du texte de l input */
 #spot > input[type="text"] {
     width: 16rem;
@@ -171,26 +177,18 @@ nav ul li {
     border-radius: 1rem 0 0 1rem;
 }
 #filters/* mise en page cadre*/ {
-    height: 3rem;
-    line-height: 3rem;
     margin: 1rem 0;
-    display: flex; /* concerne  toute la boite filters et place les differents button cote à cote */
-
-    text-align: center;
-    background-color: white;
 }
 /* mise en page element du filters*/
 #filters > h4 {
     font-size: 1.2rem;
     margin: 1rem;
     font-weight: bold;
-    align-self: center;
 }
 #filters button {
-    width: auto;
     height: 3rem;
     line-height: 3rem;
-    margin: 0 1rem;
+    margin: 1rem;
 
     border: 0.1rem solid rgb(233, 227, 227);
     border-radius: 2rem;
@@ -204,6 +202,7 @@ nav ul li {
 #filters >button i /*mise en place des icones dans les boutons*/ {
     width: 3rem;
     margin: -0.1rem 0 0 -0.8rem;
+    padding: 0;
     line-height: 3rem;
     border-radius: 50%;
     color: #0065fc;
@@ -228,9 +227,7 @@ nav ul li {
     text-align: center;
     color: #0065fc;
 }
-/*figcaption p {
-    margin-bottom: 3.5rem;
-}*/
+
 /* definition grid de la carte accomodation*/
 .accomodation_header {
     grid-area: accomodation_header;
@@ -264,9 +261,11 @@ nav ul li {
         "accomodation_card_four accomodation_card_five accomodation_card_six"
         "accomodation_footer accomodation_footer accomodation_footer";
     grid-gap: 2rem;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     padding: 1rem;
     border-radius: 1.5rem;
-    grid-template-columns: repeat(3, 1fr);
+
     background-color: rgb(228, 224, 224);
 }
 #accomodation a {
@@ -323,7 +322,6 @@ nav ul li {
     color: silver;
 }
 #accomodation figcaption i {
-    /* margin-bottom: 1rem;*/
     padding-top: 1rem;
 }
 #accomodation footer {
@@ -353,7 +351,7 @@ nav ul li {
         "best-sales_card3";
 
     grid-gap: 2rem;
-    grid-template-rows: 50px repeat(3, 140px);
+    grid-template-rows: 50px repeat(3, 180px);
     grid-template-columns: 1fr;
     border-radius: 1.5rem;
     background-color: rgb(228, 224, 224);
@@ -422,7 +420,7 @@ nav ul li {
 }
 #best-sales figcaption div {
     position: absolute;
-    bottom: 1rem;
+    bottom: 3rem;
 }
 /*#best-sales a[href="#coeur"] figcaption/* tous les éléments a contenant href coeur aller à figcaption et appliquer la regle*/ /* {
     margin-top: 4rem;
@@ -526,6 +524,7 @@ nav ul li {
     display: grid;
     grid-template-areas: "footer_about footer_stay footer_help";
     grid-gap: 2rem;
+    grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr); /*largeur de la colonne 30rem*/
     padding: 2rem;
 }
