@@ -45,38 +45,44 @@ h1, h2, h3, h4, h5, h6 /*definition commune aux différents titres*/ {
     font-size: 10px;
     font-weight: 400;
 }
-.nav_card-1 {
-    grid-area: card-1;
+.nav_logo {
+    grid-area: nav_logo;
 }
-.nav_card-2 {
-    grid-area: card-2;
+.nav_item_2 {
+    grid-area: nav_item_2;
+}
+.nav_item_3 {
+    grid-area: nav_item_3;
+}
+.nav_item_4 {
+    grid-area: nav_item_4;
 }
 
-#navbar /*placement des card l'1 par rapport à l'autre*/ {
+#navbar nav /*placement des card l'1 par rapport à l'autre*/ {
     display: grid;
-    grid-template-areas: "nav_card-1 nav_card-2";
-    grid-gap: 2rem;
+    grid-template-areas: "nav_logo nav_item_2 nav_item_3 nav_item_4";
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
     padding: 1rem;
     background-color: rgb(228, 224, 224);
 }
 nav img {
-    margin-left: 1rem;
+    margin: 4rem 0;
+    padding: 0;
 }
 
 /*positionnement box du menu suppression des puces*/
-nav ul {
+nav a {
     display: flex;
-    padding: 0 30rem;
+    padding: 0;
     position: relative;
-    margin: -5.5rem 0 0 80rem;
+    margin: -5.5rem 0;
 
     font-size: 1.5rem;
     list-style-type: none;
 }
 /*positionnement du menu dans la box */
-nav ul a {
+.nav_item_2 .nav_item_3 .nav_item_4 {
     margin: 0 2rem;
     padding-top: 1rem;
     display: block; /*pour isoler chaque a */
@@ -86,6 +92,7 @@ nav ul a {
     border-top: 3px solid rgb(21, 115, 255);
     padding: 1rem 1rem 0 1rem; /*pour placer la barre en top apres le display:block du nav ul a*/
     color: rgb(21, 115, 255);
+    text-align: center;
 }
 #activities {
     color: black;
@@ -154,9 +161,9 @@ nav ul a {
     color: white;
     border: none;
 }
-/*#spot > button i {
+#spot > button i {
     display: none;
-}*/
+}
 /*mise en gras du texte de l input */
 #spot > input[type="text"] {
     width: 16rem;
@@ -168,7 +175,7 @@ nav ul a {
     border: none;
 }
 /*mise en page et placement de l icone dans place*/
-#spot i {
+.icone {
     width: 3rem;
     height: 3rem;
     line-height: 3rem;
@@ -261,7 +268,7 @@ nav ul a {
         "accomodation_card_four accomodation_card_five accomodation_card_six"
         "accomodation_footer accomodation_footer accomodation_footer";
     grid-gap: 2rem;
-    grid-template-rows: 1fr;
+    grid-template-rows: 25px repeat(2, 1fr) 40px;
     grid-template-columns: repeat(3, 1fr);
     padding: 1rem;
     border-radius: 1.5rem;
@@ -298,7 +305,7 @@ nav ul a {
 }
 /*legend */
 #accomodation figcaption {
-    margin-left: 1rem;
+    padding: 1rem;
     text-decoration: none;
 }
 #accomodation figcaption h5 {
@@ -420,11 +427,8 @@ nav ul a {
 }
 #best-sales figcaption div {
     position: absolute;
-    bottom: 3rem;
+    bottom: 1rem;
 }
-/*#best-sales a[href="#coeur"] figcaption/* tous les éléments a contenant href coeur aller à figcaption et appliquer la regle*/ /* {
-    margin-top: 4rem;
-}*/
 
 .visit_title {
     grid-area: visit_title;
@@ -454,7 +458,7 @@ nav ul a {
         "visit_title visit_title visit_title visit_title"
         "visit_cardone visit_cardtwo visit_cardthree visit_cardfour"
         "visit_cardone visit_cardfive visit_cardthree visit_cardsix";
-
+    grid-gap: 2rem;
     padding: 2rem;
     grid-template-rows: 5rem 30rem 30rem;
     grid-template-columns: repeat(4, 1fr);

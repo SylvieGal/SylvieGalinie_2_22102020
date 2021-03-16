@@ -19,8 +19,19 @@ body {
     width: auto;
     text-align: left;
 }
-#navbar ul {
+#navbar nav /*placement des card l'1 par rapport à l'autre*/ {
+    display: grid;
+    grid-template-areas:
+        "nav_logo nav_item_4"
+        "nav_item_2 nav_item_3";
+    grid-template-rows: repeat(2, 0.5fr);
+    grid-template-columns: repeat(2, 1.5fr);
+    padding: 1rem;
+    background-color: rgb(228, 224, 224);
+}
+#navbar a {
     margin: -0.5rem;
+    padding: 0;
 }
 #stay {
     border-top: none;
@@ -29,28 +40,58 @@ body {
 }
 #activities {
     display: inline-block;
-    padding-left: 4rem;
+    padding: 1rem 0 0 4rem;
 }
 #inscription {
-    display: block;
-    margin-top: -5.5rem;
+    padding: 1rem 0 0 4rem;
 }
 #search header {
     margin-left: 1rem;
 }
-
+/* Changer le bouton Rechercher par licone loupe  dans spot*/
 #spot > button {
     display: none;
-    width: 4rem;
+    width: 3rem;
     height: 3rem;
     line-height: 3rem;
-    font-size: 0;
-
     color: white;
 }
 #spot > button i {
-    display: initial;
-    background-color: #0065fc;
+    display: block;
+    text-align: center;
+    line-height: 3rem;
+    border-radius: 0 1rem 1rem 0;
+}
+.filter_eco {
+    grid-area: filter_eco;
+}
+.filter_fam {
+    grid-area: filter_fam;
+}
+.filter_love {
+    grid-area: filter_love;
+}
+.filter_pet {
+    grid-area: filter_pet;
+}
+#filter {
+    display: grid;
+    grid-template-areas:
+        "filter_eco filter_fam"
+        "filter_love"
+        "filter_pet";
+    grid-gap: 0rem;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+#filter .filter_eco {
+    padding: 0;
+}
+
+#filter .filter_pet {
+    display: block;
+    justify-content: start;
+    padding: 0;
 }
 #best-sales figure {
     width: 100%;
@@ -65,25 +106,26 @@ body {
 }
 
 #accomodation {
+    display: grid; /*pour placer les cartes en colonne*/
     grid-template-areas:
-        "accomodation_header accomodation_header"
+        "accomodation_header "
         "accomodation_card-one accomodation_card-one"
         "accomodation_card-two accomodation_card-two"
         "accomodation_card-three accomodation_card-three"
         "accomodation_card-four accomodation_card-four"
         "accomodation_card-five accomodation_card-five"
         "accomodation_card-six accomodation_card-six"
-        "accomodation_footer accomodation_footer";
+        "accomodation_footer ";
 
     grid-gap: 2rem;
-    grid-template-rows: 370px;
-    grid-template-columns: 1fr;
-    display: inline-block; /*pour placer les cartes en colonne*/
-    justify-content: space-around;
+    grid-template-rows: 25px repeat(6, 200px) 25px;
+    grid-template-columns: repeat(2, 1fr);
+
+    justify-content: start;
     padding: 2rem;
 }
 #accomodation figure {
-    height: 270px;
+    height: 100%;
 }
 #accomodation img {
     height: 75%;

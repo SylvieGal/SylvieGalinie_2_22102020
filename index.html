@@ -19,17 +19,16 @@
         <!-- <div class="col-xm-01 col-sm-02">-->
         <header id="navbar" style="background-color: rgb(236, 200, 200)">
             <nav>
-                <img
-                    class="nav_card-1"
-                    src="images/logo/reservia.svg"
-                    alt="Logo de Réservia"
-                />
-
-                <ul class="nav_card-2">
-                    <a id="stay">Hébergements</a>
-                    <a id="activities">Activités</a>
-                    <a id="inscription">S'inscrire</a>
-                </ul>
+                <a href="index.html">
+                    <img
+                        class="nav_logo"
+                        src="images/logo/reservia.svg"
+                        alt="Logo de Réservia"
+                    />
+                </a>
+                <a class="nav_item_2" id="stay">Hébergements</a>
+                <a class="nav_item_3" id="activities">Activités</a>
+                <a class="nav_item_4" id="inscription">S'inscrire</a>
             </nav>
         </header>
         <section id="search">
@@ -44,7 +43,9 @@
                     id="spot"
                     style="background-color: red"
                 >
-                    <i class="fas fa-map-marker-alt fa-1x"></i>
+                    <div class="icone">
+                        <i class="fas fa-map-marker-alt fa-1x"></i>
+                    </div>
                     <input
                         type="text"
                         name="Marseille"
@@ -64,18 +65,18 @@
                 >
                     <h4>Filtres</h4>
 
-                    <button>
+                    <button class="filter_eco">
                         <i class="fas fa-money-bill-wave-alt fa-1x"></i
                         ><span>Economique</span>
                     </button>
-                    <button>
+                    <button class="filter_fam">
                         <i class="fas fa-child fa-1x"></i><span>Familial</span>
                     </button>
-                    <button>
+                    <button class="filter_love">
                         <i class="fas fa-heart fa-1x"></i>
                         <span>Romantique</span>
                     </button>
-                    <button>
+                    <button class="filter_pet">
                         <i class="fas fa-dog fa-1x"></i>
                         <span>Animaux autorisés</span>
                     </button>
