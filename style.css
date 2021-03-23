@@ -175,7 +175,7 @@ nav a {
     border: none;
 }
 /*mise en page et placement de l icone dans place*/
-.icone {
+#spot .icone {
     width: 3rem;
     height: 3rem;
     line-height: 3rem;
@@ -278,6 +278,7 @@ nav a {
 #accomodation a {
     display: block;
     width: 100%;
+    height: 100%;
     text-decoration: none;
     color: black;
 }
@@ -358,7 +359,7 @@ nav a {
         "best-sales_card3";
 
     grid-gap: 2rem;
-    grid-template-rows: 50px repeat(3, 180px);
+    grid-template-rows: 20px repeat(3, 150px);
     grid-template-columns: 1fr;
     border-radius: 1.5rem;
     background-color: rgb(228, 224, 224);
@@ -427,7 +428,7 @@ nav a {
 }
 #best-sales figcaption div {
     position: absolute;
-    bottom: 1rem;
+    bottom: 2rem;
 }
 
 .visit_title {
@@ -466,6 +467,7 @@ nav a {
     background-color: rgb(228, 224, 224);
 }
 #visit h4 {
+    margin: 0;
     font-size: 1.8rem;
     font-weight: bold;
 }
@@ -529,7 +531,7 @@ nav a {
     grid-template-areas: "footer_about footer_stay footer_help";
     grid-gap: 2rem;
     grid-template-rows: 1fr;
-    grid-template-columns: repeat(3, 1fr); /*largeur de la colonne 30rem*/
+    grid-template-columns: repeat(3, 1fr);
     padding: 2rem;
 }
 

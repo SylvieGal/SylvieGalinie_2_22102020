@@ -24,14 +24,13 @@ body {
     grid-template-areas:
         "nav_logo nav_item_4"
         "nav_item_2 nav_item_3";
-    grid-template-rows: repeat(2, 0.5fr);
-    grid-template-columns: repeat(2, 1.5fr);
+    grid-template-rows: repeat(2, 70px);
+    grid-template-columns: repeat(2, 150px);
     padding: 1rem;
     background-color: rgb(228, 224, 224);
 }
 #navbar a {
     margin: -0.5rem;
-    padding: 0;
 }
 #stay {
     border-top: none;
@@ -48,9 +47,9 @@ body {
 #search header {
     margin-left: 1rem;
 }
-/* Changer le bouton Rechercher par licone loupe  dans spot*/
+/* Changer le bouton Rechercher par l icone loupe  dans spot*/
 #spot > button {
-    display: none;
+    display: block; /* maintien du bouton*/
     width: 3rem;
     height: 3rem;
     line-height: 3rem;
@@ -61,6 +60,10 @@ body {
     text-align: center;
     line-height: 3rem;
     border-radius: 0 1rem 1rem 0;
+}
+/*masquage du span*/
+#spot > button span {
+    display: none;
 }
 .filter_eco {
     grid-area: filter_eco;
@@ -81,8 +84,11 @@ body {
         "filter_love"
         "filter_pet";
     grid-gap: 0rem;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 70px);
     grid-template-columns: 1fr 1fr;
+}
+#filter > h4 {
+    display: flex;
 }
 #filter .filter_eco {
     padding: 0;
@@ -93,6 +99,7 @@ body {
     justify-content: start;
     padding: 0;
 }
+
 #best-sales figure {
     width: 100%;
     height: 100%;
@@ -102,23 +109,23 @@ body {
     height: 100%;
 }
 #best-sales figcaption {
-    margin-top: 4rem;
+    padding: 1rem;
 }
 
 #accomodation {
     display: grid; /*pour placer les cartes en colonne*/
     grid-template-areas:
-        "accomodation_header "
-        "accomodation_card-one accomodation_card-one"
-        "accomodation_card-two accomodation_card-two"
-        "accomodation_card-three accomodation_card-three"
-        "accomodation_card-four accomodation_card-four"
-        "accomodation_card-five accomodation_card-five"
-        "accomodation_card-six accomodation_card-six"
-        "accomodation_footer ";
+        "accomodation_header accomodation_header"
+        "accomodation_card_one accomodation_card_one"
+        "accomodation_card_two accomodation_card_two"
+        "accomodation_card_three accomodation_card_three"
+        "accomodation_card_four accomodation_card_four"
+        "accomodation_card_five accomodation_card_five"
+        "accomodation_card_six accomodation_card_six"
+        "accomodation_footer accommodation_footer";
 
     grid-gap: 2rem;
-    grid-template-rows: 25px repeat(6, 200px) 25px;
+    grid-template-rows: 25px repeat(6, 270px) 40px;
     grid-template-columns: repeat(2, 1fr);
 
     justify-content: start;
@@ -128,13 +135,15 @@ body {
     height: 100%;
 }
 #accomodation img {
-    height: 75%;
+    height: 70%;
 }
 #accomodation figcaption {
     width: 100%;
     word-wrap: break-word;
+    height: 25%;
 }
 #visit {
+    display: grid;
     grid-template-areas:
         "visit_header visit_header"
         "visit_cardone visit_cardone"
@@ -145,11 +154,10 @@ body {
         "visit_cardsix visit_cardsix";
 
     grid-gap: 2rem;
-    grid-template-rows: repeat(7, 100px);
-    grid-template-columns: 1fr;
-    display: inline-block; /*pour placer les cartes en colonne*/
-    justify-content: start;
+    grid-template-rows: 30px repeat(6, 180px);
+    grid-template-columns: repeat(2, 1fr);
     padding: 2rem;
+    width: 100%;
 }
 #visit a[href="#port"]figure,
 #visit a[href="#calanques"]figure {
@@ -157,23 +165,25 @@ body {
     height: 0%;
 }
 #visit figure {
-    width: auto;
-    height: 30rem;
+    padding: 1rem;
+    height: 100%;
 }
 #visit a[href="#port"]img,
 #visit a[href="#calanques"]img {
     display: block;
 }
 #visit img {
-    height: 100%;
+    display: block;
+    height: 70%;
 }
 #footer {
+    display: grid;
     grid-template-areas:
         "footer_about"
         "footer_stay"
         "footer_help";
     grid-gap: 1.5rem;
-    grid-template-rows: 1fr;
+    grid-template-rows: repeat(3, 70px);
     grid-template-columns: 1fr;
     word-wrap: normal;
 }
