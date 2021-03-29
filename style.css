@@ -12,6 +12,9 @@ html {
 #navbar {
     grid-area: navbar;
 }
+.signup {
+    grid-area: signup;
+}
 #search {
     grid-area: search;
 }
@@ -34,13 +37,15 @@ body {
     grid-template-areas:
         "navbar navbar"
         "search search"
-        "accomodation best-sales" /*placement du cadre les plus populaires à cote d accomodation*/
+        "accomodation best-sales"
         "visit visit"
         "footer footer";
-    grid-template-columns: [accomodation] 2fr [best-sales] 1fr; /* taille de colonne . ici 2 différentes*/
+    grid-template-columns: 2fr 1fr;
     grid-gap: 1rem;
 }
-
+figure {
+    box-shadow: 0 10px 10px silver;
+}
 h1, h2, h3, h4, h5, h6 /*definition commune aux différents titres*/ {
     font-size: 10px;
     font-weight: 400;
@@ -57,50 +62,42 @@ h1, h2, h3, h4, h5, h6 /*definition commune aux différents titres*/ {
 .nav_item_4 {
     grid-area: nav_item_4;
 }
-
-#navbar nav /*placement des card l'1 par rapport à l'autre*/ {
+#navbar nav {
     display: grid;
     grid-template-areas: "nav_logo nav_item_2 nav_item_3 nav_item_4";
-    grid-template-rows: 1fr;
-    grid-template-columns: 3fr 1fr 1fr 1fr;
-    padding: 1rem;
-    background-color: rgb(228, 224, 224);
+    grid-gap: 2rem;
+    grid-template-rows: 70px;
+    grid-template-columns: 10fr repeat(3, 1fr);
+    padding: 0 1rem;
+    background-color: rgb(223, 191, 191);
 }
 nav img {
-    margin: 4rem 0;
-    padding: 0;
+    height: 100%;
 }
 
 /*positionnement box du menu suppression des puces*/
 nav a {
-    display: flex;
-    padding: 0;
-    position: relative;
-    margin: -5.5rem 0;
-
-    font-size: 1.5rem;
-    list-style-type: none;
+    line-height: 70px;
 }
 /*positionnement du menu dans la box */
-.nav_item_2 .nav_item_3 .nav_item_4 {
-    margin: 0 2rem;
-    padding-top: 1rem;
-    display: block; /*pour isoler chaque a */
-}
-#stay {
-    margin-top: 0rem;
-    border-top: 3px solid rgb(21, 115, 255);
-    padding: 1rem 1rem 0 1rem; /*pour placer la barre en top apres le display:block du nav ul a*/
-    color: rgb(21, 115, 255);
+.nav_item_2,
+.nav_item_3,
+.nav_item_4 {
     text-align: center;
 }
+#stay {
+    border-top: 2px solid #0065fc;
+    color: #0065fc;
+}
 #activities {
-    color: black;
-    display: inline-block;
 }
 #inscription {
-    font-weight: bold;
-    color: rgb(21, 115, 255);
+    color: #0065fc;
+    font-weight: 100;
+}
+#activities,
+#inscription {
+    padding-top: 0.3rem;
 }
 .search_card1 {
     grid-area: card1;
@@ -118,9 +115,9 @@ nav a {
     grid-gap: 1rem;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
+    padding: 1rem;
 }
 #search header {
-    margin-left: 1rem;
 }
 #search h4 {
     font-weight: bold;
@@ -146,9 +143,9 @@ nav a {
         "place_card1"
         "place_card2";
     grid-gap: 2rem;
-    grid-template-rows: 1fr;
+    grid-template-rows: 30px 110px;
     grid-template-columns: 1fr;
-    margin-left: 1rem;
+    padding-left: 1rem;
 }
 /*background pour le bouton rechercher */
 #spot > button {
@@ -210,6 +207,7 @@ nav a {
     width: 3rem;
     margin: -0.1rem 0 0 -0.8rem;
     padding: 0;
+    height: 3rem;
     line-height: 3rem;
     border-radius: 50%;
     color: #0065fc;
@@ -225,6 +223,7 @@ nav a {
 #filters button:visited {
     border: rgb(134, 7, 7);
 }
+
 /*mise en couleur de l'icone de paragraphe */
 
 #search p i {
@@ -293,19 +292,20 @@ nav a {
     height: 30rem;
     border: 0.5rem solid rgb(255, 255, 255);
     border-radius: 1rem;
-    box-shadow: 2px 2px 2px rgb(221, 220, 220);
+    box-shadow: 0px 10px 10px silver;
     background-color: #fff;
     color: black;
 }
 #accomodation img {
     object-fit: cover;
     width: 100%;
-    height: 19.3rem;
+    height: (100%-55px);
     line-height: 193px;
     border-radius: 1rem 1rem 0rem 0rem;
 }
 /*legend */
 #accomodation figcaption {
+    height: 55px;
     padding: 1rem;
     text-decoration: none;
 }
@@ -373,11 +373,11 @@ nav a {
 #best-sales figure /* cadre de carte*/ {
     display: flex; /* pour placer cote a cote img et figcaption*/
 
-    height: 180px;
+    height: 100%;
     margin: 0;
     border: 0.5rem solid rgb(255, 255, 255);
     border-radius: 1rem;
-    box-shadow: 2px 2px 2px rgb(221, 220, 220);
+    box-shadow: 0px 10px 10px silver;
     background-color: #fff;
     color: black;
 }
@@ -473,8 +473,9 @@ nav a {
 }
 #visit figure /* cadre de carte*/ {
     margin: 0;
+    width: 100%;
     height: 100%;
-    border: 0.5rem solid rgb(255, 255, 255);
+
     border-radius: 1rem;
     box-shadow: 2px 2px 2px rgb(221, 220, 220);
     background-color: #fff;
@@ -489,7 +490,7 @@ nav a {
 #visit img {
     object-fit: cover;
     width: 100%;
-    height: 85%;
+    height: calc(100%-50px);
     border-radius: 1rem 1rem 0rem 0rem;
 }
 #visit a[href="#port"] figure,
@@ -499,8 +500,8 @@ nav a {
 }
 /*legend */
 #visit > figcaption {
-    height: 30%;
-    line-height: 60px;
+    height: 50px;
+    line-height: 50px;
     padding: 0 5px;
     text-decoration: none;
 }

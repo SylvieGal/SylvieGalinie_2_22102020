@@ -1,5 +1,5 @@
 :root {
-    font-size: 8px;
+    font-size: 12px;
 }
 
 body {
@@ -12,41 +12,31 @@ body {
         "footer";
     grid-gap: 2rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto;
 }
 
 #navbar {
-    width: auto;
-    text-align: left;
 }
-#navbar nav /*placement des card l'1 par rapport à l'autre*/ {
-    display: grid;
+#navbar nav {
     grid-template-areas:
         "nav_logo nav_item_4"
         "nav_item_2 nav_item_3";
-    grid-template-rows: repeat(2, 70px);
-    grid-template-columns: repeat(2, 150px);
-    padding: 1rem;
-    background-color: rgb(228, 224, 224);
+    grid-template-rows: 70px 70px;
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-gap: none;
 }
-#navbar a {
-    margin: -0.5rem;
+
+.nav_item_4 {
+    text-align: right;
 }
 #stay {
-    border-top: none;
-    border-bottom: 3px solid rgb(21, 115, 255);
-    padding: 1rem;
 }
 #activities {
-    display: inline-block;
-    padding: 1rem 0 0 4rem;
 }
 #inscription {
-    padding: 1rem 0 0 4rem;
 }
-#search header {
-    margin-left: 1rem;
-}
+
 /* Changer le bouton Rechercher par l icone loupe  dans spot*/
 #spot > button {
     display: block; /* maintien du bouton*/
@@ -99,7 +89,9 @@ body {
     justify-content: start;
     padding: 0;
 }
-
+#search p {
+    padding: 1rem;
+}
 #best-sales figure {
     width: 100%;
     height: 100%;
@@ -135,46 +127,38 @@ body {
     height: 100%;
 }
 #accomodation img {
-    height: 70%;
+    height: calc(100%-55px);
 }
 #accomodation figcaption {
     width: 100%;
     word-wrap: break-word;
-    height: 25%;
+    height: 55px;
 }
+
 #visit {
     display: grid;
     grid-template-areas:
-        "visit_header visit_header"
-        "visit_cardone visit_cardone"
-        "visit_cardtwo visit_cardtwo"
-        "visit_cardthree visit_cardthree"
-        "visit_cardfour visit_cardfour"
-        "visit_cardfive visit_cardfive"
-        "visit_cardsix visit_cardsix";
+        "visit_title visit_title"
+        "visit_cardone visit_cardtwo"
+        "visit_cardthree visit_cardfour"
+        "visit_cardfive visit_cardsix";
 
     grid-gap: 2rem;
-    grid-template-rows: 30px repeat(6, 180px);
+    grid-template-rows: auto repeat(3, 180px);
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem;
-    width: 100%;
 }
-#visit a[href="#port"]figure,
-#visit a[href="#calanques"]figure {
+#visit a {
     display: block;
-    height: 0%;
 }
 #visit figure {
-    padding: 1rem;
+    width: 100%;
     height: 100%;
 }
-#visit a[href="#port"]img,
-#visit a[href="#calanques"]img {
-    display: block;
-}
+
 #visit img {
     display: block;
-    height: 70%;
+    height: calc(100%-50px);
 }
 #footer {
     display: grid;
