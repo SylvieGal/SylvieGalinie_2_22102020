@@ -1,0 +1,63 @@
+:root {
+    font-size: 8px;
+}
+#search .card1 > h4 {
+    margin: 0;
+    padding-bottom: 1rem;
+    font-size: 15px;
+}
+#search .card1 > p {
+    margin: 0;
+    padding-bottom: 1rem;
+    font-size: 12px;
+}
+
+#search p {
+    display: block;
+    margin: 4rem 0 0 0;
+}
+/*pour placer les cartes en colonne*/
+#accomodation {
+    display: grid;
+    grid-template-areas:
+        "accomodation_header"
+        "accomodation_card_one "
+        "accomodation_card_two"
+        "accomodation_card_three "
+        "accomodation_card_four"
+        "accomodation_card_five"
+        " accomodation_card_six"
+        "accomodation_footer ";
+
+    grid-gap: 2rem;
+    grid-template-rows: 25px repeat(6, 200px) 40px;
+    grid-template-columns: 1fr;
+
+    justify-content: start;
+    padding: 2rem;
+}
+#accomodation img {
+    height: calc(100% - 65px);
+}
+#accomodation figcaption {
+    height: 65px;
+}
+#visit {
+    display: grid;
+    grid-template-areas:
+        "visit_title"
+        "visit_cardone"
+        " visit_cardtwo"
+        "visit_cardthree"
+        "visit_cardfour"
+        "visit_cardfive"
+        "visit_cardsix";
+
+    grid-gap: 2rem;
+    grid-template-rows: auto repeat(6, 180px);
+    grid-template-columns: 1fr;
+    padding: 2rem;
+}
+#visit figcaption {
+    line-height: 35px;
+}

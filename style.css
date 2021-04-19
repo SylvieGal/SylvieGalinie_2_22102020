@@ -47,7 +47,7 @@ figure {
     box-shadow: 0 10px 10px silver;
 }
 h1, h2, h3, h4, h5, h6 /*definition commune aux différents titres*/ {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 400;
 }
 .nav_logo {
@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 /*definition commune aux différents titres*/ {
     grid-gap: 2rem;
     grid-template-rows: 70px;
     grid-template-columns: 10fr repeat(3, 1fr);
-    padding: 0 1rem;
+    /*padding: 0 1rem;*/
     background-color: rgb(223, 191, 191);
 }
 nav img {
@@ -84,12 +84,11 @@ nav a {
 .nav_item_3,
 .nav_item_4 {
     text-align: center;
+    font-size: 12px;
 }
 #stay {
     border-top: 2px solid #0065fc;
     color: #0065fc;
-}
-#activities {
 }
 #inscription {
     color: #0065fc;
@@ -113,11 +112,9 @@ nav a {
         "card1 "
         "card2 ";
     grid-gap: 1rem;
-    grid-template-rows: 1fr;
+    grid-template-rows: 75px;
     grid-template-columns: 1fr;
     padding: 1rem;
-}
-#search header {
 }
 #search h4 {
     font-weight: bold;
@@ -131,24 +128,10 @@ nav a {
 #spot {
     display: flex;
 }
-.place_card1 {
-    grid-area: place_card1;
-}
-.place_card2 {
-    grid-area: place_card2;
-}
-#place {
-    display: grid;
-    grid-template-areas:
-        "place_card1"
-        "place_card2";
-    grid-gap: 2rem;
-    grid-template-rows: 30px 110px;
-    grid-template-columns: 1fr;
-    padding-left: 1rem;
-}
+
 /*background pour le bouton rechercher */
 #spot > button {
+    padding: 0;
     width: 10rem;
     height: 3rem;
     line-height: 3rem;
@@ -163,6 +146,7 @@ nav a {
 }
 /*mise en gras du texte de l input */
 #spot > input[type="text"] {
+    padding: 0;
     width: 16rem;
     height: 3rem;
     line-height: 3rem;
@@ -181,26 +165,25 @@ nav a {
     border-radius: 1rem 0 0 1rem;
 }
 #filters/* mise en page cadre*/ {
-    margin: 1rem 0;
+    padding: 0;
 }
+
 /* mise en page element du filters*/
 #filters > h4 {
-    font-size: 1.2rem;
-    margin: 1rem;
+    display: inline-block;
+    font-size: 15px;
     font-weight: bold;
 }
 #filters button {
     height: 3rem;
     line-height: 3rem;
-    margin: 1rem;
-
     border: 0.1rem solid rgb(233, 227, 227);
     border-radius: 2rem;
     background-color: #fff;
     font-weight: bold;
 }
 #filters button span {
-    padding: 1rem;
+    padding: 0 1rem;
 }
 
 #filters >button i /*mise en place des icones dans les boutons*/ {
@@ -267,7 +250,7 @@ nav a {
         "accomodation_card_four accomodation_card_five accomodation_card_six"
         "accomodation_footer accomodation_footer accomodation_footer";
     grid-gap: 2rem;
-    grid-template-rows: 25px repeat(2, 1fr) 40px;
+    grid-template-rows: 25px repeat(2, 265px) 50px;
     grid-template-columns: repeat(3, 1fr);
     padding: 1rem;
     border-radius: 1.5rem;
@@ -282,14 +265,14 @@ nav a {
     color: black;
 }
 #accomodation h4 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
 }
 #accomodation figure /* cadre de carte*/ {
     margin: 0;
     width: auto;
-    height: 30rem;
+    height: 100%;
     border: 0.5rem solid rgb(255, 255, 255);
     border-radius: 1rem;
     box-shadow: 0px 10px 10px silver;
@@ -299,19 +282,19 @@ nav a {
 #accomodation img {
     object-fit: cover;
     width: 100%;
-    height: (100%-55px);
-    line-height: 193px;
+    height: calc(100% - 95px);
+
     border-radius: 1rem 1rem 0rem 0rem;
 }
 /*legend */
 #accomodation figcaption {
-    height: 55px;
+    height: 95px;
     padding: 1rem;
     text-decoration: none;
 }
 #accomodation figcaption h5 {
     margin: 0rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
     word-wrap: break-word;
     text-decoration: none;
@@ -359,8 +342,9 @@ nav a {
         "best-sales_card3";
 
     grid-gap: 2rem;
-    grid-template-rows: 20px repeat(3, 150px);
+    grid-template-rows: 30px repeat(3, 150px);
     grid-template-columns: 1fr;
+    padding: 1rem;
     border-radius: 1.5rem;
     background-color: rgb(228, 224, 224);
 }
@@ -392,7 +376,7 @@ nav a {
 }
 #best-sales h4 {
     margin: 0;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 /* placement icône titre */
@@ -417,18 +401,19 @@ nav a {
 
 #best-sales figcaption h5 {
     margin: 0;
-    padding: 0;
-    font-size: 1.8rem;
+    padding: 1rem 0;
+    font-size: 1.3rem;
     font-weight: bold;
     word-wrap: break-word;
 }
 #best-sales figcaption p {
-    font-size: 1.4rem;
+    margin: 0;
+    font-size: 1.2rem;
     font-weight: normal;
 }
 #best-sales figcaption div {
     position: absolute;
-    bottom: 2rem;
+    bottom: 1rem;
 }
 
 .visit_title {
@@ -490,7 +475,7 @@ nav a {
 #visit img {
     object-fit: cover;
     width: 100%;
-    height: calc(100%-50px);
+    height: calc(100% - 50px);
     border-radius: 1rem 1rem 0rem 0rem;
 }
 #visit a[href="#port"] figure,
@@ -502,7 +487,7 @@ nav a {
 #visit > figcaption {
     height: 50px;
     line-height: 50px;
-    padding: 0 5px;
+    padding: 0 1rem;
     text-decoration: none;
 }
 #visit figcaption h5 {
@@ -515,7 +500,7 @@ nav a {
 #visit a[href="#port"] img,
 #visit a[href="#calanques"] img {
     display: inline-block;
-    height: 93%;
+    height: calc(100% - 50px);
 }
 
 .footer_about {
@@ -531,7 +516,7 @@ nav a {
     display: grid;
     grid-template-areas: "footer_about footer_stay footer_help";
     grid-gap: 2rem;
-    grid-template-rows: 1fr;
+    grid-template-rows: 75px;
     grid-template-columns: repeat(3, 1fr);
     padding: 2rem;
 }

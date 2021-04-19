@@ -15,8 +15,6 @@ body {
     grid-template-rows: auto;
 }
 
-#navbar {
-}
 #navbar nav {
     grid-template-areas:
         "nav_logo nav_item_4"
@@ -24,17 +22,26 @@ body {
     grid-template-rows: 70px 70px;
     grid-template-columns: repeat(2, 1fr);
 
-    grid-gap: none;
+    grid-gap: 0;
 }
 
 .nav_item_4 {
     text-align: right;
 }
-#stay {
+.nav_logo {
+    padding-left: 3rem;
 }
+#stay {
+    border-top: none;
+    border-bottom: 2px solid #0065fc;
+}
+#stay,
 #activities {
+    display: flex;
+    justify-content: center;
 }
 #inscription {
+    padding-right: 3rem;
 }
 
 /* Changer le bouton Rechercher par l icone loupe  dans spot*/
@@ -55,6 +62,7 @@ body {
 #spot > button span {
     display: none;
 }
+
 .filter_eco {
     grid-area: filter_eco;
 }
@@ -71,11 +79,11 @@ body {
     display: grid;
     grid-template-areas:
         "filter_eco filter_fam"
-        "filter_love"
-        "filter_pet";
+        "filter_love filter_love"
+        "filter_pet filter_pet";
     grid-gap: 0rem;
     grid-template-rows: repeat(3, 70px);
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
 }
 #filter > h4 {
     display: flex;
@@ -90,7 +98,8 @@ body {
     padding: 0;
 }
 #search p {
-    padding: 1rem;
+    padding: 0;
+    margin: 0;
 }
 #best-sales figure {
     width: 100%;
@@ -103,21 +112,18 @@ body {
 #best-sales figcaption {
     padding: 1rem;
 }
-
+/*pour placer les cartes en colonne*/
 #accomodation {
-    display: grid; /*pour placer les cartes en colonne*/
+    display: grid;
     grid-template-areas:
         "accomodation_header accomodation_header"
-        "accomodation_card_one accomodation_card_one"
-        "accomodation_card_two accomodation_card_two"
-        "accomodation_card_three accomodation_card_three"
-        "accomodation_card_four accomodation_card_four"
-        "accomodation_card_five accomodation_card_five"
-        "accomodation_card_six accomodation_card_six"
+        "accomodation_card_one accomodation_card_two"
+        "accomodation_card_three accomodation_card_four"
+        "accomodation_card_five accomodation_card_six"
         "accomodation_footer accommodation_footer";
 
     grid-gap: 2rem;
-    grid-template-rows: 25px repeat(6, 270px) 40px;
+    grid-template-rows: 25px repeat(3, 270px) 40px;
     grid-template-columns: repeat(2, 1fr);
 
     justify-content: start;
@@ -127,12 +133,15 @@ body {
     height: 100%;
 }
 #accomodation img {
-    height: calc(100%-55px);
+    height: calc(100% - 95px);
 }
 #accomodation figcaption {
     width: 100%;
     word-wrap: break-word;
-    height: 55px;
+    height: 95px;
+}
+#accomodation footer {
+    font-size: 1.5rem;
 }
 
 #visit {
@@ -158,7 +167,10 @@ body {
 
 #visit img {
     display: block;
-    height: calc(100%-50px);
+    height: calc(100% - 50px);
+}
+#visit figcaption {
+    height: 50px;
 }
 #footer {
     display: grid;
