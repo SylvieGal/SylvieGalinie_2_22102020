@@ -69,7 +69,6 @@ h1, h2, h3, h4, h5, h6 /*definition commune aux différents titres*/ {
     grid-template-rows: 70px;
     grid-template-columns: 10fr repeat(3, 1fr);
     /*padding: 0 1rem;*/
-    background-color: rgb(223, 191, 191);
 }
 nav img {
     height: 100%;
@@ -150,7 +149,7 @@ nav a {
     width: 16rem;
     height: 3rem;
     line-height: 3rem;
-    text-align: center;
+
     font-weight: bold;
     color: black;
     border: none;
@@ -255,7 +254,7 @@ nav a {
     padding: 1rem;
     border-radius: 1.5rem;
 
-    background-color: rgb(228, 224, 224);
+    background-color: rgb(248, 248, 248);
 }
 #accomodation a {
     display: block;
@@ -283,6 +282,7 @@ nav a {
     object-fit: cover;
     width: 100%;
     height: calc(100% - 95px);
+    line-height: 95px;
 
     border-radius: 1rem 1rem 0rem 0rem;
 }
@@ -294,14 +294,12 @@ nav a {
 }
 #accomodation figcaption h5 {
     margin: 0rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bold;
-    word-wrap: break-word;
-    text-decoration: none;
 }
 #accomodation figcaption p {
     margin: 0rem;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     font-size: 1.4rem;
 }
 .blue {
@@ -346,7 +344,7 @@ nav a {
     grid-template-columns: 1fr;
     padding: 1rem;
     border-radius: 1.5rem;
-    background-color: rgb(228, 224, 224);
+    background-color: rgb(246, 246, 246);
 }
 .best-sales_image {
     grid-area: best-sales_image;
@@ -356,7 +354,7 @@ nav a {
 }
 #best-sales figure /* cadre de carte*/ {
     display: flex; /* pour placer cote a cote img et figcaption*/
-
+    width: 100%;
     height: 100%;
     margin: 0;
     border: 0.5rem solid rgb(255, 255, 255);
@@ -394,7 +392,9 @@ nav a {
 /*legend */
 #best-sales figcaption {
     padding: 1rem;
-    width: 65%;
+    width: 60%;
+    height: 100%;
+
     font-size: 1rem;
     position: relative;
 }
@@ -402,7 +402,8 @@ nav a {
 #best-sales figcaption h5 {
     margin: 0;
     padding: 1rem 0;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+
     font-weight: bold;
     word-wrap: break-word;
 }
@@ -476,6 +477,7 @@ nav a {
     object-fit: cover;
     width: 100%;
     height: calc(100% - 50px);
+    line-height: 30px;
     border-radius: 1rem 1rem 0rem 0rem;
 }
 #visit a[href="#port"] figure,
@@ -487,12 +489,11 @@ nav a {
 #visit > figcaption {
     height: 50px;
     line-height: 50px;
-    padding: 0 1rem;
+    padding: 0 20px;
     text-decoration: none;
 }
 #visit figcaption h5 {
     margin: 0;
-    padding: 1rem;
 
     font-size: 1.5rem;
     font-weight: bold;

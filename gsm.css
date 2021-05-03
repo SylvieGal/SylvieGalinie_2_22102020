@@ -16,6 +16,16 @@
     display: block;
     margin: 4rem 0 0 0;
 }
+#spot > input[type="text"] {
+    width: calc(100% - 6rem);
+}
+#spot > button i {
+    border-radius: 0.5rem;
+}
+#best-sales,
+footer {
+    border-radius: none;
+}
 /*pour placer les cartes en colonne*/
 #accomodation {
     display: grid;
@@ -35,6 +45,7 @@
 
     justify-content: start;
     padding: 2rem;
+    background: none;
 }
 #accomodation img {
     height: calc(100% - 65px);
@@ -57,7 +68,5 @@
     grid-template-rows: auto repeat(6, 180px);
     grid-template-columns: 1fr;
     padding: 2rem;
-}
-#visit figcaption {
-    line-height: 35px;
+    background: none;
 }

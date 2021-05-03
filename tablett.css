@@ -47,6 +47,7 @@ body {
 /* Changer le bouton Rechercher par l icone loupe  dans spot*/
 #spot > button {
     display: block; /* maintien du bouton*/
+    border-radius: 1rem;
     width: 3rem;
     height: 3rem;
     line-height: 3rem;
@@ -104,10 +105,12 @@ body {
 #best-sales figure {
     width: 100%;
     height: 100%;
+    line-height: 100%;
 }
 #best-sales img {
     width: 40%;
     height: 100%;
+    line-height: 100%;
 }
 #best-sales figcaption {
     padding: 1rem;
@@ -170,7 +173,9 @@ body {
     height: calc(100% - 50px);
 }
 #visit figcaption {
+    padding: 0 20px;
     height: 50px;
+    line-height: 50px;
 }
 #footer {
     display: grid;
