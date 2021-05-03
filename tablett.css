@@ -86,7 +86,7 @@ body {
     grid-template-rows: repeat(3, 70px);
     grid-template-columns: repeat(2, 1fr);
 }
-#filter > h4 {
+#filter > h1q {
     display: flex;
 }
 #filter .filter_eco {
