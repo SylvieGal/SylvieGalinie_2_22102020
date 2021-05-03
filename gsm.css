@@ -24,7 +24,7 @@
 }
 #best-sales,
 footer {
-    border-radius: 0;
+    border-radius: unset;
 }
 /*pour placer les cartes en colonne*/
 #accomodation {
