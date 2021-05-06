@@ -44,7 +44,7 @@ body {
     grid-gap: 1rem;
 }
 figure {
-    box-shadow: 0 10px 10px silver;
+    box-shadow: 0 5px 10px silver;
 }
 h1, h2, h3, h4, h5, h6 /*definition commune aux différents titres*/ {
     font-size: 12px;
@@ -275,7 +275,7 @@ nav a {
     height: 100%;
     border: 0.5rem solid rgb(255, 255, 255);
     border-radius: 1rem;
-    box-shadow: 0px 10px 10px silver;
+    box-shadow: 0px 5px 10px silver;
     background-color: #fff;
     color: black;
 }
@@ -360,7 +360,7 @@ nav a {
     margin: 0;
     border: 0.5rem solid rgb(255, 255, 255);
     border-radius: 1rem;
-    box-shadow: 0px 10px 10px silver;
+    box-shadow: 0px 5px 10px silver;
     background-color: #fff;
     color: black;
 }
@@ -464,7 +464,7 @@ nav a {
     height: 100%;
 
     border-radius: 1rem;
-    box-shadow: 0px 10px 10px silver;
+    box-shadow: 0px 5px 10px silver;
     background-color: #fff;
     color: black;
 }
@@ -521,6 +521,7 @@ nav a {
     grid-template-rows: 75px;
     grid-template-columns: repeat(3, 1fr);
     padding: 2rem;
+    background-color: rgb(246 246 246);
 }
 
 #footer h1 {
