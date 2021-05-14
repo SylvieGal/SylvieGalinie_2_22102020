@@ -115,7 +115,7 @@ nav a {
     grid-template-columns: 1fr;
     padding: 1rem;
 }
-#search h1 {
+#search h2 {
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -168,7 +168,7 @@ nav a {
 }
 
 /* mise en page element du filters*/
-#filters > h1 {
+#filters > h2 {
     display: inline-block;
     font-size: 15px;
     font-weight: bold;
@@ -264,7 +264,7 @@ nav a {
     text-decoration: none;
     color: black;
 }
-#accomodation h1 {
+#accomodation h2 {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
@@ -293,7 +293,7 @@ nav a {
     padding: 1rem;
     text-decoration: none;
 }
-#accomodation figcaption h2 {
+#accomodation figcaption h3 {
     margin: 0rem;
     font-size: 1.6rem;
     font-weight: bold;
@@ -373,7 +373,7 @@ nav a {
     justify-content: space-between; /* pour separer le titre de l'icone*/
     font-weight: bold;
 }
-#best-sales h1 {
+#best-sales h2 {
     margin: 0;
     font-size: 1.5rem;
     font-weight: bold;
@@ -400,7 +400,7 @@ nav a {
     position: relative;
 }
 
-#best-sales figcaption h2 {
+#best-sales figcaption h3 {
     margin: 0;
     padding: 1rem 0;
     font-size: 1.5rem;
@@ -453,7 +453,7 @@ nav a {
     border-radius: 1.5rem;
     background-color: rgb(228, 224, 224);
 }
-#visit h1 {
+#visit h2 {
     margin: 0;
     font-size: 1.8rem;
     font-weight: bold;
@@ -493,7 +493,7 @@ nav a {
     padding: 0 20px;
     text-decoration: none;
 }
-#visit figcaption h2 {
+#visit figcaption h3 {
     margin: 0;
 
     font-size: 1.5rem;
