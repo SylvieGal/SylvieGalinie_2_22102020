@@ -487,11 +487,10 @@ nav a {
     height: 100%;
 }
 /*legend */
-#visit > figcaption {
+#visit figcaption {
+    padding: 0 20px;
     height: 50px;
     line-height: 50px;
-    padding: 0 20px;
-    text-decoration: none;
 }
 #visit figcaption h3 {
     margin: 0;
